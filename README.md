@@ -1,6 +1,5 @@
 # 🔬 Science Olympiad Tryout Scores & Team Roster Selection Dashboard
 
-[![GitHub Pages Ready](https://img.shields.io/badge/GitHub%20Pages-Ready-brightgreen?logo=github)](https://A-Uranium-Atom.github.io/scioly-roster-dashboard/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HTML5 / Vanilla JS](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-orange.svg)](#technical-architecture)
 [![Events: 23](https://img.shields.io/badge/Events-23%20Included-teal.svg)](#features)
@@ -67,34 +66,24 @@ This dashboard provides coaches with an interactive, data-driven workspace to ev
 
 ## 🚀 Getting Started
 
-### Option 1: Live on GitHub Pages
-Once GitHub Pages is enabled on this repository:
-1. Navigate to **Settings > Pages** in your GitHub repository.
-2. Under **Build and deployment > Source**, select **Deploy from a branch**.
-3. Choose the `main` branch and `/ (root)` folder, then click **Save**.
-4. Access your live dashboard at:
-   ```
-   https://A-Uranium-Atom.github.io/scioly-roster-dashboard/
-   ```
-
-### Option 2: Running Locally
 This application is completely self-contained with **zero external dependencies** and requires no build steps or local servers:
-1. Clone the repository:
+
+1. Clone or download the repository:
    ```bash
    git clone https://github.com/A-Uranium-Atom/scioly-roster-dashboard.git
    cd scioly-roster-dashboard
    ```
-2. Open `index.html` in any modern web browser (Chrome, Edge, Firefox, Safari):
-   - Double-click `index.html` or run:
+2. Open `2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html` in any modern web browser (Chrome, Edge, Firefox, Safari):
+   - Double-click the file or run:
      ```bash
      # Windows
-     start index.html
+     start 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html
 
      # macOS
-     open index.html
+     open 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html
 
      # Linux
-     xdg-open index.html
+     xdg-open 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html
      ```
 
 ---
@@ -103,10 +92,10 @@ This application is completely self-contained with **zero external dependencies*
 
 ```
 scioly-roster-dashboard/
-├── .gitignore                                           # Standard ignore rules
-├── 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html  # Versioned source dashboard
-├── index.html                                           # Primary web entry point (GitHub Pages)
-└── README.md                                            # Project documentation & reference
+├── .gitignore                                                 # Standard ignore rules
+├── 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html        # Interactive tryout & selection dashboard
+├── LICENSE                                                    # MIT License
+└── README.md                                                  # Project documentation & reference
 ```
 
 ---
