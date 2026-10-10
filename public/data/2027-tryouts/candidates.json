@@ -1,0 +1,1991 @@
+[
+  {
+    "id": "727786",
+    "name": "Samuel Lozovatsky",
+    "grade": 8,
+    "tier": "",
+    "statement": "Outside school, Samuel makes time for reading.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719670",
+    "name": "Lydia Galvin",
+    "grade": 5,
+    "tier": "",
+    "statement": "Lydia already trains five hours a week toward an Olympic-sized swimming dream.",
+    "ice": "Raspberry Sorbet",
+    "optout": false
+  },
+  {
+    "id": "719637",
+    "name": "Evaan Banerjee",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Evaan makes time for swimming and golf.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "724780",
+    "name": "Ben Werner",
+    "grade": 5,
+    "tier": "",
+    "statement": "Ben solves multiple kinds of Rubik’s cubes.",
+    "ice": "Mint",
+    "optout": false
+  },
+  {
+    "id": "719026",
+    "name": "Ryan Li",
+    "grade": 6,
+    "tier": "",
+    "statement": "Ryan completed a 9,090-piece LEGO Titanic.",
+    "ice": "New York Cheesecake",
+    "optout": false
+  },
+  {
+    "id": "716741",
+    "name": "Musa Moeen",
+    "grade": 7,
+    "tier": "B+",
+    "statement": "Musa is proud of 1st in a DI season.",
+    "ice": "Pizza",
+    "optout": false
+  },
+  {
+    "id": "726641",
+    "name": "Kendrick Hu",
+    "grade": 8,
+    "tier": "",
+    "statement": "Kendrick modified a toy bow so it could shoot nearly twice as far.",
+    "ice": "Chocolate Brownie Fudge Coffee Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "726459",
+    "name": "Vaishvi Patel",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Vaishvi makes time for reading.",
+    "ice": "Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "726642",
+    "name": "Sophie Hu",
+    "grade": 6,
+    "tier": "",
+    "statement": "Sophie is happiest making time for violin and origami.",
+    "ice": "White Chocolate Raspberry Truffle",
+    "optout": false
+  },
+  {
+    "id": "715599",
+    "name": "Yohaan Ravadi",
+    "grade": 7,
+    "tier": "",
+    "statement": "Yohaan has already researched stocks as part of a student investment team.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "720000",
+    "name": "Warren Zhu",
+    "grade": 5,
+    "tier": "",
+    "statement": "Warren is still exploring a future in i’m not sure what i wanna be just yet but i have an idea like an engineer or something that’s hands on.",
+    "ice": "Rainbow Sherbet",
+    "optout": false
+  },
+  {
+    "id": "719826",
+    "name": "Arav Sathish",
+    "grade": 5,
+    "tier": "",
+    "statement": "Arav earned a Guinness World Record certificate through a massive group dance.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "727203",
+    "name": "Samar Chauhan",
+    "grade": 7,
+    "tier": "",
+    "statement": "Outside school, Samar makes time for reading.",
+    "ice": "Broccoli",
+    "optout": false
+  },
+  {
+    "id": "717311",
+    "name": "Neil Arora",
+    "grade": 7,
+    "tier": "",
+    "statement": "Neil won a tennis tournament at age nine against players as old as 13.",
+    "ice": "Rocky Road",
+    "optout": false
+  },
+  {
+    "id": "716851",
+    "name": "Jack Jiang",
+    "grade": 7,
+    "tier": "",
+    "statement": "Jack is proud of number one in the school in the car derby competition.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719814",
+    "name": "Avisha Saraswat",
+    "grade": 5,
+    "tier": "",
+    "statement": "Avisha has already chosen the heart as a future specialty.",
+    "ice": "Mint Chip",
+    "optout": false
+  },
+  {
+    "id": "720578",
+    "name": "Anaisha Jain",
+    "grade": 5,
+    "tier": "",
+    "statement": "Anaisha is still exploring a future in i want to be a doctor.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "727737",
+    "name": "Ansh Patel",
+    "grade": 7,
+    "tier": "",
+    "statement": "Ansh spent years earning a black belt.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "723590",
+    "name": "Aarav Trivedi",
+    "grade": 7,
+    "tier": "",
+    "statement": "Aarav turned years of comic drawing into a spelling-bee podium finish.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "716654",
+    "name": "Aarush Vajrala",
+    "grade": 7,
+    "tier": "",
+    "statement": "Aarush is proud of 2 piano exams.",
+    "ice": "Pistachio",
+    "optout": false
+  },
+  {
+    "id": "716789",
+    "name": "Shashanth Uppara",
+    "grade": 7,
+    "tier": "",
+    "statement": "Shashanth is proud of a high score on the reading map after struggling a lot prior years.",
+    "ice": "Oreo",
+    "optout": false
+  },
+  {
+    "id": "715515",
+    "name": "Aneesh Gangireddy",
+    "grade": 7,
+    "tier": "",
+    "statement": "Aneesh recharges with cross country, volleyball and soccer.",
+    "ice": "Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "720110",
+    "name": "Mridhu Laya Sudharsan",
+    "grade": 6,
+    "tier": "S",
+    "statement": "Mridhu Laya taught herself to make personalized gifts for her whole family.",
+    "ice": "Lemon",
+    "optout": false
+  },
+  {
+    "id": "719724",
+    "name": "Nicholas Kuon",
+    "grade": 5,
+    "tier": "",
+    "statement": "Nicholas built and launched a model rocket, then watched it disappear.",
+    "ice": "Mango",
+    "optout": true
+  },
+  {
+    "id": "717286",
+    "name": "Sriya Nagasarapu",
+    "grade": 5,
+    "tier": "",
+    "statement": "Sriya is proud of a singing contest as 2nd place in Ohio.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "715288",
+    "name": "Lasya Papannagari",
+    "grade": 6,
+    "tier": "",
+    "statement": "Lasya wants a career combining helping people with a love of arguing.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "714923",
+    "name": "Anish Gotike",
+    "grade": 8,
+    "tier": "",
+    "statement": "Anish is proud of a U-12 tennis tournament or beating the Tower of Champion's Road.",
+    "ice": "Neapolitan",
+    "optout": false
+  },
+  {
+    "id": "722060",
+    "name": "Ellton Lin",
+    "grade": 5,
+    "tier": "",
+    "statement": "Ellton repaired a broken engineering kit with a hot-glue workaround.",
+    "ice": "Bug",
+    "optout": false
+  },
+  {
+    "id": "723642",
+    "name": "Asad Umar Shafique",
+    "grade": 6,
+    "tier": "S",
+    "statement": "Asad Umar built an app that warns when food is about to go bad.",
+    "ice": "Mint Chip",
+    "optout": false
+  },
+  {
+    "id": "722574",
+    "name": "Rehaan Shah",
+    "grade": 8,
+    "tier": "",
+    "statement": "Rehaan is proud of my computer.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "719897",
+    "name": "Adhya Ashwin",
+    "grade": 5,
+    "tier": "",
+    "statement": "Adhya is proud of all the props in the skit!.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "715016",
+    "name": "Derek Peng",
+    "grade": 8,
+    "tier": "S+",
+    "statement": "Derek would happily put a working roller coaster in the bedroom.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "726417",
+    "name": "David Gilmore",
+    "grade": 8,
+    "tier": "",
+    "statement": "David started an AI club to help others automate ideas.",
+    "ice": "Superman",
+    "optout": false
+  },
+  {
+    "id": "713064",
+    "name": "Vihaan Khosla",
+    "grade": 7,
+    "tier": "B",
+    "statement": "Vihaan wants to turn art and building into architecture.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "719870",
+    "name": "Vedang Joshi",
+    "grade": 5,
+    "tier": "",
+    "statement": "Vedang hopes to build a future around the ocean and its animals.",
+    "ice": "S'mores",
+    "optout": false
+  },
+  {
+    "id": "721793",
+    "name": "Hamid Doddamane",
+    "grade": 7,
+    "tier": "",
+    "statement": "Hamid is still exploring a future in programmer or game developer.",
+    "ice": "Sour Lemon-Lime with Warheads",
+    "optout": false
+  },
+  {
+    "id": "724825",
+    "name": "Atharv Goel",
+    "grade": 8,
+    "tier": "",
+    "statement": "Atharv won back-to-back reading challenges with 56 and 62 books.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719706",
+    "name": "Nived Kolla",
+    "grade": 5,
+    "tier": "",
+    "statement": "Nived is still exploring a future in doctor so i save a lot of peoples.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "722144",
+    "name": "Harshini Senthilnathan",
+    "grade": 8,
+    "tier": "",
+    "statement": "Harshini recharges with chess.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "722640",
+    "name": "Harshal Agrawal",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Harshal makes time for tennis.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "716896",
+    "name": "Darren Gao",
+    "grade": 7,
+    "tier": "",
+    "statement": "Outside school, Darren makes time for soccer.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "726663",
+    "name": "Purushoottam Atchutuni",
+    "grade": 7,
+    "tier": "",
+    "statement": "Purushoottam is proud of assignments on time.",
+    "ice": "Butterscotch",
+    "optout": false
+  },
+  {
+    "id": "715908",
+    "name": "Sai Tanuku",
+    "grade": 8,
+    "tier": "",
+    "statement": "Sai spent an entire summer completing the Pokémon National Dex.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "713941",
+    "name": "Hanisha Gode",
+    "grade": 7,
+    "tier": "",
+    "statement": "Hanisha is already drafting a book of their own.",
+    "ice": "Rainbow Sherbet",
+    "optout": false
+  },
+  {
+    "id": "723434",
+    "name": "Maria Maliakal",
+    "grade": 8,
+    "tier": "D",
+    "statement": "Maria is still exploring a future in i want to be a doctor so i can help people feel healthier and more confident in their own body.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "720937",
+    "name": "Pranavi Kundanamadugu",
+    "grade": 7,
+    "tier": "A",
+    "statement": "Pranavi is still exploring a future in i wanna be an interior designer.",
+    "ice": "Salted Caramel",
+    "optout": false
+  },
+  {
+    "id": "726847",
+    "name": "Prathiksha Vaithianathan",
+    "grade": 5,
+    "tier": "",
+    "statement": "Prathiksha keeps a full schedule with reading.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "721595",
+    "name": "Shriya Gidhesh",
+    "grade": 8,
+    "tier": "",
+    "statement": "Shriya volunteered to tutor younger students in math.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "726320",
+    "name": "Sharanya Khatri",
+    "grade": 8,
+    "tier": "",
+    "statement": "Sharanya won a middle-school spelling bee after moving from Mississippi.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "721956",
+    "name": "Sri Vegi",
+    "grade": 8,
+    "tier": "",
+    "statement": "Sri got a firsthand anatomy lesson from a classroom fish dissection.",
+    "ice": "S'mores",
+    "optout": false
+  },
+  {
+    "id": "716837",
+    "name": "Nithish Manivannan",
+    "grade": 7,
+    "tier": "",
+    "statement": "Nithish has already chosen the heart as a future specialty.",
+    "ice": "Oreo",
+    "optout": false
+  },
+  {
+    "id": "716982",
+    "name": "Anushree Ilayarajan",
+    "grade": 7,
+    "tier": "",
+    "statement": "Anushree is already recognized as a stage singer.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "726121",
+    "name": "Jinal Patel",
+    "grade": 7,
+    "tier": "A",
+    "statement": "Jinal has already selected “spy” as a possible future career.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "716632",
+    "name": "Erin Xie",
+    "grade": 7,
+    "tier": "A+",
+    "statement": "Erin broke 80 on a par-72 golf course by staying calm after mistakes.",
+    "ice": "Mint",
+    "optout": false
+  },
+  {
+    "id": "716503",
+    "name": "Margo Olea",
+    "grade": 8,
+    "tier": "A+",
+    "statement": "Margo presented a mental-health passion project to school administrators.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "717553",
+    "name": "Adithi Allanki",
+    "grade": 6,
+    "tier": "B",
+    "statement": "Adithi jokes that a free month could disappear into 50 books.",
+    "ice": "Black Raspberry Chip",
+    "optout": false
+  },
+  {
+    "id": "717094",
+    "name": "Ronith Kamalesh",
+    "grade": 6,
+    "tier": "B+",
+    "statement": "Ronith has an island-survival plan involving genies and unlimited wishes.",
+    "ice": "Birthday Cake",
+    "optout": false
+  },
+  {
+    "id": "719315",
+    "name": "Alex Guo",
+    "grade": 7,
+    "tier": "S",
+    "statement": "Alex casually mentions already learning college-level chemistry for fun.",
+    "ice": "Something Diabolical",
+    "optout": false
+  },
+  {
+    "id": "718769",
+    "name": "Vivien Kim",
+    "grade": 6,
+    "tier": "A+",
+    "statement": "Vivien keeps a full schedule with drawing.",
+    "ice": "Coffee",
+    "optout": false
+  },
+  {
+    "id": "717251",
+    "name": "Johanna John",
+    "grade": 8,
+    "tier": "",
+    "statement": "Johanna is proud of up the courage to talk in front of a group of people.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "715724",
+    "name": "Lasya Bhamidipati",
+    "grade": 7,
+    "tier": "B",
+    "statement": "Lasya writes poetry and already has a poem selected for publication.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "715053",
+    "name": "Anya Sharma",
+    "grade": 8,
+    "tier": "",
+    "statement": "Outside school, Anya makes time for reading and crocheting.",
+    "ice": "Raspberry Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "718840",
+    "name": "Ashab Khan",
+    "grade": 6,
+    "tier": "B+",
+    "statement": "Ashab spent years earning a black belt.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "718180",
+    "name": "Sayantika Roy",
+    "grade": 6,
+    "tier": "",
+    "statement": "Sayantika is torn between exploring the universe and designing fashion.",
+    "ice": "Honey Lavender",
+    "optout": false
+  },
+  {
+    "id": "716862",
+    "name": "Vihaan Date",
+    "grade": 7,
+    "tier": "A",
+    "statement": "Vihaan is proud of a chess trophy at a tournament before.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "716779",
+    "name": "Emmie Yin",
+    "grade": 7,
+    "tier": "S",
+    "statement": "Emmie spent her summer teaching herself next year’s Algebra before school even started.",
+    "ice": "A Flavor That Tastes Bad",
+    "optout": false
+  },
+  {
+    "id": "716907",
+    "name": "Qian Cheng",
+    "grade": 7,
+    "tier": "D",
+    "statement": "Qian is considering a future split between YouTube and tree-ring science.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "717388",
+    "name": "Reyansh Jain",
+    "grade": 8,
+    "tier": "A",
+    "statement": "Reyansh keeps a full schedule with cross country, soccer and tennis.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719007",
+    "name": "Arissa Li",
+    "grade": 6,
+    "tier": "A",
+    "statement": "Arissa cannot decide between exploring the ocean and running a courtroom.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "723917",
+    "name": "Shrinath Ramachandran",
+    "grade": 7,
+    "tier": "A",
+    "statement": "Shrinath studied on buses and during recess on the way to an AAPI Cup win, while considering a future as i want to work in the biology field or medicinal field.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "716653",
+    "name": "Ambuja Raghavan",
+    "grade": 7,
+    "tier": "",
+    "statement": "Ambuja started an earring business and sells original designs.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "723531",
+    "name": "Stella Zou",
+    "grade": 7,
+    "tier": "S",
+    "statement": "Stella lists dissecting cow eyeballs as a favorite school-day memory.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "721097",
+    "name": "Emma Zheng",
+    "grade": 5,
+    "tier": "",
+    "statement": "Emma keeps a full schedule with piano and dance.",
+    "ice": "Birthday Cake",
+    "optout": true
+  },
+  {
+    "id": "719880",
+    "name": "Caleb Alter",
+    "grade": 5,
+    "tier": "",
+    "statement": "Caleb coded a platform game called Pixel Kid.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "719823",
+    "name": "Thushara Rajesh",
+    "grade": 5,
+    "tier": "",
+    "statement": "Thushara would turn an island escape into a Disney cruise vacation.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "718312",
+    "name": "Arjun Jadhav",
+    "grade": 6,
+    "tier": "",
+    "statement": "Arjun is proud of the 20th anniversary black history bowl in 5th grade.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "721580",
+    "name": "Naithik Chebolu",
+    "grade": 5,
+    "tier": "",
+    "statement": "Naithik is happiest making time for soccer.",
+    "ice": "Cotton Candy",
+    "optout": true
+  },
+  {
+    "id": "721874",
+    "name": "Bowen Zheng",
+    "grade": 5,
+    "tier": "",
+    "statement": "Bowen can turn almost any conversation into one about planes.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "719648",
+    "name": "Cecilia Gong",
+    "grade": 5,
+    "tier": "",
+    "statement": "Cecilia is happiest making time for piano.",
+    "ice": "101 Candles",
+    "optout": false
+  },
+  {
+    "id": "719801",
+    "name": "Eli Sarkar",
+    "grade": 5,
+    "tier": "",
+    "statement": "Eli is proud of accelerated in mathematics.",
+    "ice": "Coffee",
+    "optout": false
+  },
+  {
+    "id": "727798",
+    "name": "Vihaan Vipin",
+    "grade": 7,
+    "tier": "",
+    "statement": "Vihaan is proud of an award for citizenship.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719855",
+    "name": "Ashwin Bharathi",
+    "grade": 5,
+    "tier": "",
+    "statement": "Ashwin switched to a 3D app to finish a complicated LEGO F1 car.",
+    "ice": "Black Raspberry Chocolate Chunk",
+    "optout": false
+  },
+  {
+    "id": "723962",
+    "name": "Ethan Koshy",
+    "grade": 7,
+    "tier": "",
+    "statement": "Outside school, Ethan makes time for soccer.",
+    "ice": "Pop Rocks Strawberry",
+    "optout": false
+  },
+  {
+    "id": "722695",
+    "name": "Althea Sherlin Arockya Nelson",
+    "grade": 7,
+    "tier": "",
+    "statement": "Althea Sherlin is proud of how to cook independently.",
+    "ice": "Black Raspberry Chip",
+    "optout": false
+  },
+  {
+    "id": "718575",
+    "name": "Leo Tian",
+    "grade": 6,
+    "tier": "",
+    "statement": "Leo relaxes by engineering projects from paper and aluminum.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "717180",
+    "name": "Trisha Sriniketh",
+    "grade": 7,
+    "tier": "",
+    "statement": "Trisha originally wanted to bring an entire Costco to a deserted island.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "714926",
+    "name": "Ved Gulhane",
+    "grade": 8,
+    "tier": "",
+    "statement": "Ved won an Ohio state chess championship.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "718337",
+    "name": "Dan Yu",
+    "grade": 6,
+    "tier": "",
+    "statement": "Dan survived a classroom cricket escape during an ecosystem project.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719785",
+    "name": "Varun Srikanth",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Varun makes time for speedcubing, tennis and drawing.",
+    "ice": "Birthday Cake",
+    "optout": false
+  },
+  {
+    "id": "717700",
+    "name": "Avni Choudhary",
+    "grade": 7,
+    "tier": "",
+    "statement": "Avni is proud of into double honers.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719776",
+    "name": "Raghav Saxena",
+    "grade": 5,
+    "tier": "",
+    "statement": "Raghav played roughly 2,000 chess games on the way to a 1700 rating.",
+    "ice": "Rocky Road",
+    "optout": false
+  },
+  {
+    "id": "727263",
+    "name": "Shantha Venkataraman",
+    "grade": 7,
+    "tier": "",
+    "statement": "Shantha is still exploring a future in probably a us.",
+    "ice": "Passion Fruit",
+    "optout": false
+  },
+  {
+    "id": "718188",
+    "name": "Sriyan Shrestha",
+    "grade": 6,
+    "tier": "",
+    "statement": "Outside school, Sriyan makes time for swimming.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "714765",
+    "name": "Kana Asai",
+    "grade": 8,
+    "tier": "S",
+    "statement": "Kana keeps a full schedule with competitive swimming, swimming and flute.",
+    "ice": "Matcha",
+    "optout": false
+  },
+  {
+    "id": "727318",
+    "name": "Meru Kainkaryam",
+    "grade": 5,
+    "tier": "",
+    "statement": "Meru created an entrepreneurship club before reaching middle school.",
+    "ice": "Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "726741",
+    "name": "Anushka Muthu",
+    "grade": 7,
+    "tier": "",
+    "statement": "Anushka spent years earning a black belt.",
+    "ice": "Strawberry Shortcake",
+    "optout": false
+  },
+  {
+    "id": "725153",
+    "name": "Rivan Timbadia",
+    "grade": 7,
+    "tier": "",
+    "statement": "Rivan is proud of 15th place in the national geography bee in 6th grade.",
+    "ice": "Chocolate Brownie Custard",
+    "optout": false
+  },
+  {
+    "id": "719783",
+    "name": "Riyasri Rammohan",
+    "grade": 5,
+    "tier": "",
+    "statement": "Riyasri already thinks like a future entrepreneur.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "718409",
+    "name": "Nathan Fernandes",
+    "grade": 6,
+    "tier": "",
+    "statement": "Nathan considers a personal chef and sushi essential island-survival gear.",
+    "ice": "Birthday Cake",
+    "optout": true
+  },
+  {
+    "id": "720214",
+    "name": "Ananya Hariharan",
+    "grade": 5,
+    "tier": "",
+    "statement": "Ananya is proud of how to draw.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "718555",
+    "name": "Agastya Upadhyay",
+    "grade": 7,
+    "tier": "",
+    "statement": "Agastya went from soccer beginner to league champion.",
+    "ice": "Mint",
+    "optout": false
+  },
+  {
+    "id": "715201",
+    "name": "Abhay Bhosale",
+    "grade": 8,
+    "tier": "",
+    "statement": "Abhay is proud of XC, I worked by waking up every other day and running.",
+    "ice": "Mango",
+    "optout": false
+  },
+  {
+    "id": "716780",
+    "name": "Saatvik Yalamanchili",
+    "grade": 7,
+    "tier": "",
+    "statement": "Saatvik has already chosen the heart as a future specialty.",
+    "ice": "Tiger Tail",
+    "optout": false
+  },
+  {
+    "id": "724794",
+    "name": "Nikhil Maladen",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Nikhil makes time for soccer.",
+    "ice": "Lemon Sorbet",
+    "optout": false
+  },
+  {
+    "id": "724641",
+    "name": "Henry Xue",
+    "grade": 5,
+    "tier": "",
+    "statement": "Henry is proud of my first junior championship cut in swimming when I was 9 years old.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719859",
+    "name": "Joyce Chi",
+    "grade": 5,
+    "tier": "",
+    "statement": "Joyce is happiest making time for swimming.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "718183",
+    "name": "Hazel Mehta",
+    "grade": 6,
+    "tier": "",
+    "statement": "Hazel reached the National Junior Olympics in synchronized swimming.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "716611",
+    "name": "Arjun Srikanth",
+    "grade": 7,
+    "tier": "",
+    "statement": "Arjun has a 10.28-second personal record on a speed cube.",
+    "ice": "Coffee",
+    "optout": false
+  },
+  {
+    "id": "716499",
+    "name": "Kyle Tang",
+    "grade": 8,
+    "tier": "",
+    "statement": "Kyle has already built a solar oven capable of making s’mores.",
+    "ice": "Rocky Road",
+    "optout": false
+  },
+  {
+    "id": "718838",
+    "name": "Isabella Zhang",
+    "grade": 6,
+    "tier": "",
+    "statement": "Isabella reached the Central Zones swim meet at age 11.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "718984",
+    "name": "Chloe Liu",
+    "grade": 6,
+    "tier": "",
+    "statement": "Chloe is proud of high point at a big swimming competition.",
+    "ice": "Mint Chip",
+    "optout": false
+  },
+  {
+    "id": "718344",
+    "name": "Aadhya Terala",
+    "grade": 5,
+    "tier": "",
+    "statement": "Aadhya spent years earning a black belt, while considering a future as when i grow up i want to be a fashion designer.",
+    "ice": "Chocolate Chip Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "714887",
+    "name": "Vivaan Singh",
+    "grade": 8,
+    "tier": "",
+    "statement": "Vivaan solves multiple kinds of Rubik’s cubes.",
+    "ice": "Mango",
+    "optout": false
+  },
+  {
+    "id": "718393",
+    "name": "Leah Divincenzo",
+    "grade": 6,
+    "tier": "",
+    "statement": "Leah let the family cat help design a custom bed.",
+    "ice": "Superman",
+    "optout": true
+  },
+  {
+    "id": "721775",
+    "name": "Saahas Konam",
+    "grade": 8,
+    "tier": "",
+    "statement": "Saahas served as the only Java coder on a robotics team.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "720038",
+    "name": "Elaina Zhang",
+    "grade": 6,
+    "tier": "C",
+    "statement": "Elaina earned a state bronze medal in the 100 breaststroke.",
+    "ice": "Birthday Cake",
+    "optout": false
+  },
+  {
+    "id": "716683",
+    "name": "Hunter Hong",
+    "grade": 7,
+    "tier": "S",
+    "statement": "Hunter earned a trip to Florida as a national baseball all-star.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "716487",
+    "name": "Rohan Nadimetla",
+    "grade": 8,
+    "tier": "A+",
+    "statement": "Rohan solves multiple kinds of Rubik’s cubes.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "726078",
+    "name": "Trishika Velmurugan",
+    "grade": 5,
+    "tier": "",
+    "statement": "Trishika keeps a full schedule with reading.",
+    "ice": "Black Raspberry Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "723418",
+    "name": "Aria Chi",
+    "grade": 7,
+    "tier": "A+",
+    "statement": "Aria lists reading, synchronized swimming, piano, and annoying a sibling as hobbies.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "715039",
+    "name": "Rishi Subbaiah",
+    "grade": 8,
+    "tier": "A+",
+    "statement": "Outside school, Rishi makes time for drawing.",
+    "ice": "Mango",
+    "optout": false
+  },
+  {
+    "id": "714899",
+    "name": "Summer Yi",
+    "grade": 8,
+    "tier": "S",
+    "statement": "Summer got so frustrated with coding software that she drew every coding block by hand.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "714994",
+    "name": "Sanjana Grover",
+    "grade": 8,
+    "tier": "S",
+    "statement": "Sanjana keeps a full schedule with golf.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "715630",
+    "name": "Lakshmi Mokshitha Modala",
+    "grade": 8,
+    "tier": "A+",
+    "statement": "Lakshmi Mokshitha keeps a full schedule with volleyball.",
+    "ice": "Birthday Cake",
+    "optout": false
+  },
+  {
+    "id": "718950",
+    "name": "Christopher Yan",
+    "grade": 7,
+    "tier": "S+",
+    "statement": "Christopher divides free time between books, origami, and paper airplanes.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "718654",
+    "name": "Shreya Venkatesh",
+    "grade": 6,
+    "tier": "",
+    "statement": "Shreya expects Starlink and DoorDash even on a deserted island.",
+    "ice": "A Flavor That Changes Every Day",
+    "optout": false
+  },
+  {
+    "id": "718738",
+    "name": "Sonnie Apewokin",
+    "grade": 7,
+    "tier": "",
+    "statement": "Sonnie is proud of it to 5th grade black history bowl.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "718917",
+    "name": "Reyansh Shukla",
+    "grade": 7,
+    "tier": "B+",
+    "statement": "Reyansh is fascinated by the brain and its complexity.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "720613",
+    "name": "Demi Shan",
+    "grade": 6,
+    "tier": "",
+    "statement": "Demi is happiest making time for soccer.",
+    "ice": "Black Raspberry Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "721629",
+    "name": "Pranav Sampath",
+    "grade": 6,
+    "tier": "S+",
+    "statement": "Pranav is happiest making time for swimming, basketball and guitar.",
+    "ice": "Lemon",
+    "optout": false
+  },
+  {
+    "id": "715615",
+    "name": "Haniya Altaf",
+    "grade": 8,
+    "tier": "",
+    "statement": "Haniya turned deliberate writing practice into a spot on Power of the Pen.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "723667",
+    "name": "Sakura Anraku",
+    "grade": 6,
+    "tier": "S",
+    "statement": "Sakura trained through winter break and reached a state swim championship at age 10.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "715706",
+    "name": "Ajay Mutyala",
+    "grade": 8,
+    "tier": "",
+    "statement": "Ajay is proud of black history bowl.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "718338",
+    "name": "Lily Yu",
+    "grade": 6,
+    "tier": "B",
+    "statement": "Lily keeps a full schedule with swimming, drawing and painting.",
+    "ice": "Neapolitan",
+    "optout": false
+  },
+  {
+    "id": "715300",
+    "name": "Janani Hariharan",
+    "grade": 7,
+    "tier": "",
+    "statement": "Janani helps classmates through HOPE Squad outreach.",
+    "ice": "Black Raspberry Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "714814",
+    "name": "Aditya Kakumanu",
+    "grade": 8,
+    "tier": "",
+    "statement": "Aditya manually annotated thousands of images for an AI project.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "718097",
+    "name": "Vihaan Sharma",
+    "grade": 7,
+    "tier": "",
+    "statement": "Vihaan is proud of multiple awards from playing Chess.",
+    "ice": "Pistachio",
+    "optout": false
+  },
+  {
+    "id": "719825",
+    "name": "Pranathi Varanasi",
+    "grade": 5,
+    "tier": "",
+    "statement": "Pranathi travels with two cameras and a long list of photos to capture.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "724504",
+    "name": "Ashvik Kandula",
+    "grade": 5,
+    "tier": "",
+    "statement": "Ashvik is proud of an industry Innovator award at Ohio Invention League this year.",
+    "ice": "Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "720963",
+    "name": "Keshav Kurapati",
+    "grade": 7,
+    "tier": "",
+    "statement": "Keshav studied on buses and during recess on the way to an AAPI Cup win.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "716844",
+    "name": "Abdallah Lakhani",
+    "grade": 7,
+    "tier": "",
+    "statement": "Abdallah logged 100 volunteer hours at a local mosque.",
+    "ice": "Butterscotch",
+    "optout": false
+  },
+  {
+    "id": "716673",
+    "name": "Keerthi Pusapati",
+    "grade": 8,
+    "tier": "",
+    "statement": "Keerthi completed a ten-month Algebra course in only two months.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "718308",
+    "name": "Lina Shahin Mohamed Musthaba",
+    "grade": 6,
+    "tier": "",
+    "statement": "Lina Shahin has built a rover from pasta and candy wheels.",
+    "ice": "Black Raspberry Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "719553",
+    "name": "Samreen Karki",
+    "grade": 7,
+    "tier": "",
+    "statement": "Samreen hopes to build a future around the ocean and its animals.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "718958",
+    "name": "Sophia Wang",
+    "grade": 8,
+    "tier": "S",
+    "statement": "Sophia is proud of 1st in ScioVirtual! In the end.",
+    "ice": "Caramel Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "724988",
+    "name": "Rohan Maladen",
+    "grade": 7,
+    "tier": "",
+    "statement": "Rohan rebuilt a hollow LEGO globe after it collapsed inward.",
+    "ice": "Lime Guava",
+    "optout": true
+  },
+  {
+    "id": "724899",
+    "name": "Parnika Mylavarapu",
+    "grade": 7,
+    "tier": "",
+    "statement": "Parnika is proud of 1st place in Ohio in InvestWrite.",
+    "ice": "Mango",
+    "optout": false
+  },
+  {
+    "id": "722017",
+    "name": "Tyler Thongpinyochai",
+    "grade": 7,
+    "tier": "",
+    "statement": "Tyler is fascinated by the brain and its complexity.",
+    "ice": "Mint",
+    "optout": false
+  },
+  {
+    "id": "723417",
+    "name": "Zachary Chi",
+    "grade": 8,
+    "tier": "A",
+    "statement": "Zachary has already selected the exact aircraft for an island escape.",
+    "ice": "Mint Chip",
+    "optout": false
+  },
+  {
+    "id": "719321",
+    "name": "Hansini Vasanth",
+    "grade": 8,
+    "tier": "",
+    "statement": "Hansini spent years earning a black belt.",
+    "ice": "Strawberry Shortcake",
+    "optout": false
+  },
+  {
+    "id": "712090",
+    "name": "Vedya Vangala",
+    "grade": 8,
+    "tier": "",
+    "statement": "Vedya has already built a solar oven capable of making s’mores.",
+    "ice": "Vanilla and Chocolate Twist",
+    "optout": false
+  },
+  {
+    "id": "720663",
+    "name": "Ivan Shou",
+    "grade": 8,
+    "tier": "D",
+    "statement": "Ivan competes at jump-rope nationals.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "714760",
+    "name": "Kartika Adidamu",
+    "grade": 8,
+    "tier": "",
+    "statement": "Outside school, Kartika makes time for volleyball, drawing and painting.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "723385",
+    "name": "Gautam Shyam",
+    "grade": 7,
+    "tier": "B",
+    "statement": "Gautam recharges with soccer and reading.",
+    "ice": "Live Ant",
+    "optout": false
+  },
+  {
+    "id": "722018",
+    "name": "Annamarie Thongpinyochai",
+    "grade": 7,
+    "tier": "",
+    "statement": "Annamarie helped launch a children’s business fair in Thailand.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "716790",
+    "name": "Darsh Upadhyay",
+    "grade": 7,
+    "tier": "",
+    "statement": "Darsh considers Goldfish crackers essential survival equipment.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "724851",
+    "name": "Charvik Maddi",
+    "grade": 8,
+    "tier": "",
+    "statement": "Charvik has already identified radiation oncology as a possible future.",
+    "ice": "Vanilla and Chocolate Swirl",
+    "optout": false
+  },
+  {
+    "id": "716686",
+    "name": "Ritika Narala",
+    "grade": 7,
+    "tier": "",
+    "statement": "Ritika spent years earning a black belt.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "721011",
+    "name": "Anshika Gandham",
+    "grade": 8,
+    "tier": "",
+    "statement": "Anshika is proud of into Power of Pen.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "723850",
+    "name": "Harideep Venuturupalli",
+    "grade": 8,
+    "tier": "",
+    "statement": "Harideep turned years of comic drawing into a spelling-bee podium finish.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "724987",
+    "name": "Ayush Roy",
+    "grade": 8,
+    "tier": "",
+    "statement": "Outside school, Ayush makes time for soccer.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "715289",
+    "name": "Mandy You",
+    "grade": 6,
+    "tier": "A",
+    "statement": "Mandy somehow balances swimming, golf, piano, violin, and biking.",
+    "ice": "Rocky Road",
+    "optout": false
+  },
+  {
+    "id": "720580",
+    "name": "Reya Sudhani",
+    "grade": 6,
+    "tier": "",
+    "statement": "Reya keeps a full schedule with badminton and piano.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "719690",
+    "name": "Karin Asai",
+    "grade": 5,
+    "tier": "",
+    "statement": "Karin recharges with dance.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "724898",
+    "name": "Advaith Mylavarapu",
+    "grade": 5,
+    "tier": "",
+    "statement": "Advaith keeps a full schedule with chess.",
+    "ice": "Black Licorice",
+    "optout": false
+  },
+  {
+    "id": "719796",
+    "name": "Adrija Pal",
+    "grade": 5,
+    "tier": "",
+    "statement": "Adrija hopes to build a future around the ocean and its animals.",
+    "ice": "Neapolitan",
+    "optout": false
+  },
+  {
+    "id": "717773",
+    "name": "Trithi Edula",
+    "grade": 6,
+    "tier": "",
+    "statement": "Trithi considers owl-pellet dissection ideal hands-on learning.",
+    "ice": "Mango",
+    "optout": false
+  },
+  {
+    "id": "720062",
+    "name": "Aidan Yang",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Aidan makes time for basketball.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "720672",
+    "name": "Rayansh Alhat",
+    "grade": 6,
+    "tier": "",
+    "statement": "Rayansh is proud of entry level guitar.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  },
+  {
+    "id": "721794",
+    "name": "Safa Doddamane",
+    "grade": 5,
+    "tier": "",
+    "statement": "Safa hopes to turn a love of animals into a veterinary career.",
+    "ice": "Key Lime Pie",
+    "optout": false
+  },
+  {
+    "id": "719817",
+    "name": "Vidhi Soni",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Vidhi makes time for classical dance, volleyball and dance.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "718141",
+    "name": "Aaryansh Masampally",
+    "grade": 5,
+    "tier": "",
+    "statement": "Aaryansh is proud of for Nationals in DI.",
+    "ice": "Black Raspberry Chip",
+    "optout": false
+  },
+  {
+    "id": "718367",
+    "name": "Elise Abraham",
+    "grade": 6,
+    "tier": "",
+    "statement": "Elise is proud of things with my hands.",
+    "ice": "Lemon",
+    "optout": true
+  },
+  {
+    "id": "713760",
+    "name": "Rayaan Akbar",
+    "grade": 7,
+    "tier": "A+",
+    "statement": "Rayaan loves identifying aircraft while waiting at the airport.",
+    "ice": "Matcha",
+    "optout": false
+  },
+  {
+    "id": "721493",
+    "name": "George Cao",
+    "grade": 5,
+    "tier": "",
+    "statement": "George keeps a full schedule with swimming and piano.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "714176",
+    "name": "Mishika Nagwan",
+    "grade": 7,
+    "tier": "",
+    "statement": "Mishika is still exploring a future in a docter.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "719879",
+    "name": "Celica Mizuno",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Celica makes time for gymnastics.",
+    "ice": "Pineapple Sorbet",
+    "optout": false
+  },
+  {
+    "id": "718138",
+    "name": "Daniel Shao",
+    "grade": 7,
+    "tier": "C",
+    "statement": "Daniel is proud of nationals im jump rope.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "726717",
+    "name": "Sarthak Bagde",
+    "grade": 6,
+    "tier": "",
+    "statement": "Sarthak is proud of the best score in fitness challenges.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "719540",
+    "name": "Abeer Arora",
+    "grade": 8,
+    "tier": "",
+    "statement": "Abeer keeps a full schedule with soccer.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "719961",
+    "name": "Perina Kohli",
+    "grade": 6,
+    "tier": "",
+    "statement": "Perina spent years earning a black belt.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "716970",
+    "name": "Arshiya Agarwal",
+    "grade": 6,
+    "tier": "",
+    "statement": "Arshiya keeps a full schedule with basketball, piano and singing.",
+    "ice": "Mint Chocolate Chip",
+    "optout": true
+  },
+  {
+    "id": "716918",
+    "name": "Harshitha Pusa",
+    "grade": 5,
+    "tier": "",
+    "statement": "Harshitha is proud of 1st place in my last year's wing writing competition at school.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "718196",
+    "name": "Ayan Datta",
+    "grade": 6,
+    "tier": "",
+    "statement": "Ayan practiced dice stacking for two months just to land it.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "724503",
+    "name": "Nihal Kandula",
+    "grade": 8,
+    "tier": "",
+    "statement": "Nihal won an Ohio state chess championship.",
+    "ice": "Birthday Cake",
+    "optout": false
+  },
+  {
+    "id": "716471",
+    "name": "Virat Pasupula",
+    "grade": 8,
+    "tier": "",
+    "statement": "Virat helped create a patent-pending anti-drowning swimsuit.",
+    "ice": "Cold Sweat",
+    "optout": false
+  },
+  {
+    "id": "721691",
+    "name": "Abhiram Davuluri",
+    "grade": 8,
+    "tier": "",
+    "statement": "Abhiram turned years of comic drawing into a spelling-bee podium finish.",
+    "ice": "Banana",
+    "optout": false
+  },
+  {
+    "id": "715022",
+    "name": "Ezra Sarkar",
+    "grade": 8,
+    "tier": "",
+    "statement": "Ezra already thinks like a future entrepreneur.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "719863",
+    "name": "Trinay Venkatamanikandan",
+    "grade": 5,
+    "tier": "",
+    "statement": "Trinay is still exploring a future in astronaut, as i love space and rockets and my dream is to to fly in one.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "716734",
+    "name": "Arjun Pullalarevu",
+    "grade": 7,
+    "tier": "D",
+    "statement": "Arjun is proud of 32nd place.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "717299",
+    "name": "Aadya Gadeela",
+    "grade": 7,
+    "tier": "",
+    "statement": "Aadya is still exploring a future in i want to be a doctor.",
+    "ice": "Chocolate Chip Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "716447",
+    "name": "Krishna Mahajan",
+    "grade": 8,
+    "tier": "",
+    "statement": "Krishna spent years earning a black belt.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "720032",
+    "name": "Dheeran Senthil",
+    "grade": 6,
+    "tier": "S+",
+    "statement": "Dheeran is happiest experimenting with new additions to a LEGO castle.",
+    "ice": "Huckleberry",
+    "optout": false
+  },
+  {
+    "id": "722881",
+    "name": "Vyom Bhargava",
+    "grade": 5,
+    "tier": "",
+    "statement": "Vyom can turn almost any hands-on project into an aerospace idea.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "724865",
+    "name": "Areen David",
+    "grade": 5,
+    "tier": "",
+    "statement": "Areen had a watercolor displayed in a children’s museum art exhibit.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "718317",
+    "name": "Karthik Reddy Dirisinala",
+    "grade": 6,
+    "tier": "C",
+    "statement": "Karthik Reddy is happiest making time for swimming and soccer.",
+    "ice": "Black Raspberry Chip",
+    "optout": false
+  },
+  {
+    "id": "716428",
+    "name": "Nilakshaa Sivanandha",
+    "grade": 6,
+    "tier": "",
+    "statement": "Nilakshaa has built a rover from pasta and candy wheels.",
+    "ice": "The Worst Flavor",
+    "optout": false
+  },
+  {
+    "id": "716845",
+    "name": "Aadhya Kondapally",
+    "grade": 7,
+    "tier": "B+",
+    "statement": "Aadhya spent years earning a black belt.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "715429",
+    "name": "Karthik Dasaka",
+    "grade": 7,
+    "tier": "",
+    "statement": "Karthik solves multiple kinds of Rubik’s cubes.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "714422",
+    "name": "Siddarth Vangala",
+    "grade": 7,
+    "tier": "D",
+    "statement": "Siddarth recharges with basketball.",
+    "ice": "Chocolate",
+    "optout": false
+  },
+  {
+    "id": "714583",
+    "name": "Ishan Maheshwaram",
+    "grade": 7,
+    "tier": "",
+    "statement": "Ishan is proud of to the finals of a basketball tournament.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "720969",
+    "name": "Kavish Sivakumar",
+    "grade": 8,
+    "tier": "",
+    "statement": "Kavish has already built a solar oven capable of making s’mores.",
+    "ice": "Butterscotch",
+    "optout": false
+  },
+  {
+    "id": "712973",
+    "name": "Matthew Hahn",
+    "grade": 8,
+    "tier": "B+",
+    "statement": "Outside school, Matthew makes time for reading.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "726119",
+    "name": "Ambuj Sahi",
+    "grade": 7,
+    "tier": "A+",
+    "statement": "Ambuj is proud of 3rd place in State Math Olympiad(I was in India at the time.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "718658",
+    "name": "Arit Ray",
+    "grade": 8,
+    "tier": "",
+    "statement": "Arit plays piano and composes original music.",
+    "ice": "Mint",
+    "optout": false
+  },
+  {
+    "id": "713803",
+    "name": "Saksham Arora",
+    "grade": 8,
+    "tier": "",
+    "statement": "Saksham can turn almost any hands-on project into an aerospace idea.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "721452",
+    "name": "Anvit Badgujar",
+    "grade": 8,
+    "tier": "B",
+    "statement": "Outside school, Anvit makes time for swimming.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "723431",
+    "name": "Samihan Shinde",
+    "grade": 7,
+    "tier": "",
+    "statement": "Samihan recharges with tennis and chess.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "723637",
+    "name": "Alex Vachaparambil",
+    "grade": 8,
+    "tier": "B+",
+    "statement": "Alex spent more than a year refining a 3D-printed invention now headed toward a patent.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "719827",
+    "name": "Sahana Sathish",
+    "grade": 5,
+    "tier": "",
+    "statement": "Sahana earned a Guinness World Record certificate through a massive group dance.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "716020",
+    "name": "Oliver Kahn",
+    "grade": 6,
+    "tier": "",
+    "statement": "Oliver is proud of model UN by working hard and studying while thinking up questions to ask.",
+    "ice": "Vanilla",
+    "optout": false
+  },
+  {
+    "id": "719773",
+    "name": "Ankit Ray",
+    "grade": 5,
+    "tier": "",
+    "statement": "Ankit plays guitar and composes original music.",
+    "ice": "Strawberry",
+    "optout": false
+  },
+  {
+    "id": "719921",
+    "name": "Kartikeya Kakumanu",
+    "grade": 5,
+    "tier": "",
+    "statement": "Outside school, Kartikeya makes time for soccer.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "717025",
+    "name": "Bhrithi Sarda",
+    "grade": 7,
+    "tier": "",
+    "statement": "Bhrithi spent years earning a black belt.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "715286",
+    "name": "Jayani Prakash",
+    "grade": 7,
+    "tier": "",
+    "statement": "Outside school, Jayani makes time for gymnastics, tennis and golf.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "716978",
+    "name": "Jude Prakash",
+    "grade": 5,
+    "tier": "",
+    "statement": "Jude is still exploring a future in a scientist so that i can help slow global warming.",
+    "ice": "Cotton Candy",
+    "optout": false
+  },
+  {
+    "id": "717361",
+    "name": "Viyaan Siva Shankar",
+    "grade": 5,
+    "tier": "",
+    "statement": "Viyaan built a motorized Spinosaurus tail from scratch.",
+    "ice": "Butter Pecan",
+    "optout": false
+  },
+  {
+    "id": "714869",
+    "name": "Ava Tuladhar",
+    "grade": 8,
+    "tier": "S+",
+    "statement": "Ava is happiest making time for cross country.",
+    "ice": "Chocolate Chip Cookie Dough",
+    "optout": false
+  },
+  {
+    "id": "722052",
+    "name": "Swara Joshi",
+    "grade": 8,
+    "tier": "",
+    "statement": "Swara is proud of a challenging school project that I was proud of.",
+    "ice": "Not Provided",
+    "optout": false
+  },
+  {
+    "id": "719869",
+    "name": "Surya Pullalarevu",
+    "grade": 5,
+    "tier": "",
+    "statement": "Surya is proud of and it was my first time winning 1st place in Soccer.",
+    "ice": "Cookies and Cream",
+    "optout": false
+  },
+  {
+    "id": "726932",
+    "name": "Jifeng Wang",
+    "grade": 6,
+    "tier": "",
+    "statement": "Outside school, Jifeng makes time for basketball.",
+    "ice": "Mint Chocolate Chip",
+    "optout": false
+  }
+]

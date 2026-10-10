@@ -1,0 +1,564 @@
+/* ==========================================================================
+       1. Design Tokens & CSS Custom Properties
+       ========================================================================== */
+:root {
+  --n: #102a43;
+  --b: #2574b8;
+  --t: #119d8b;
+  --g: #5b9f46;
+  --y: #efb536;
+  --r: #d1495b;
+  --bg: #edf2f7;
+  --g5: #386cb0;
+  --g6: #00a6a6;
+  --g7: #e69500;
+  --g8: #c83e4d;
+}
+
+/* ==========================================================================
+       2. Base Reset & Typography
+       ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font:
+    13px Segoe UI,
+    Arial;
+  color: #243746;
+}
+
+header {
+  background: linear-gradient(110deg, var(--n), var(--b), var(--t));
+  color: #fff;
+  padding: 18px 24px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* ==========================================================================
+       3. Navigation Tabs
+       ========================================================================== */
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.tab {
+  padding: 8px 14px;
+  border-radius: 18px;
+  border: 1px solid #cad5df;
+  background: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tab.on {
+  background: var(--b);
+  color: #fff;
+}
+
+/* ==========================================================================
+       4. Main Layout & Grids
+       ========================================================================== */
+main {
+  max-width: 1850px;
+  margin: auto;
+  padding: 14px;
+}
+
+.note {
+  background: #fff7dc;
+  border-left: 5px solid var(--y);
+  padding: 10px;
+}
+
+.controls,
+.kpis,
+.layout,
+.stats,
+.two,
+.charts,
+.calcgrid {
+  display: grid;
+  gap: 10px;
+}
+
+.layout {
+  grid-template-columns: 2fr 1fr;
+  margin-top: 10px;
+}
+
+.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ==========================================================================
+       5. Controls & Filter Bar
+       ========================================================================== */
+.controls {
+  grid-template-columns: repeat(7, 1fr);
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 9px;
+}
+
+.controls label {
+  display: block;
+  font-size: 10px;
+  color: #667;
+  text-transform: uppercase;
+}
+
+.controls input,
+.controls select {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccd6df;
+  border-radius: 5px;
+}
+
+/* ==========================================================================
+       6. KPI Metric Cards & Panel Containers
+       ========================================================================== */
+.kpis {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.kpi,
+.panel,
+.chartbox,
+.calc {
+  background: #fff;
+  border-radius: 10px;
+  padding: 11px;
+  box-shadow: 0 1px 5px #0001;
+}
+
+.kpi {
+  border-top: 4px solid var(--t);
+}
+
+.kpi b {
+  display: block;
+  font-size: 20px;
+}
+
+.grade5 {
+  border-top-color: var(--g5);
+}
+
+.grade6 {
+  border-top-color: var(--g6);
+}
+
+.grade7 {
+  border-top-color: var(--g7);
+}
+
+.grade8 {
+  border-top-color: var(--g8);
+}
+
+/* ==========================================================================
+       7. Table & Scoreboard
+       ========================================================================== */
+.scroll {
+  max-height: 650px;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: var(--n);
+  color: #fff;
+  padding: 7px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th.sorted {
+  background: #ffd166;
+  color: #18324a;
+  box-shadow: inset 0 -4px 0 #e38b00;
+}
+
+td {
+  padding: 6px;
+  border-bottom: 1px solid #e5eaf0;
+  white-space: nowrap;
+}
+
+.rank {
+  font-size: 15px;
+  font-weight: 900;
+  color: #5d7080;
+  text-align: center;
+}
+
+.sel {
+  background: #e7f4e0 !important;
+}
+
+.opt {
+  background: #ffe6e6 !important;
+}
+
+.link {
+  color: #1769a6;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+       8. Badges, Tags & Performance Bars
+       ========================================================================== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  padding: 3px 8px;
+  font-weight: 800;
+  margin: 1px;
+}
+
+.tier {
+  color: #fff;
+}
+
+.sp {
+  background: #6f2dbd;
+}
+.ss {
+  background: #9d4edd;
+}
+.ap {
+  background: #006d77;
+}
+.aa {
+  background: #2a9d8f;
+}
+.bp {
+  background: #3a86ff;
+}
+.bb {
+  background: #6c91c2;
+}
+.cc {
+  background: #f4a261;
+}
+.dd {
+  background: #8d99ae;
+}
+.new {
+  background: #d8e0e8;
+  color: #667;
+}
+
+.g5 {
+  background: var(--g5);
+  color: #fff;
+}
+.g6 {
+  background: var(--g6);
+  color: #fff;
+}
+.g7 {
+  background: var(--g7);
+  color: #fff;
+}
+.g8 {
+  background: var(--g8);
+  color: #fff;
+}
+.inj {
+  background: #ffd0d0;
+  color: #941d2c;
+}
+
+.bar {
+  position: relative;
+  min-width: 72px;
+  height: 20px;
+  background: #edf1f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: #7ab6e6;
+  opacity: 0.72;
+}
+
+.bar.hi i {
+  background: #66b357;
+}
+
+.bar.mid i {
+  background: #efb536;
+}
+
+.bar span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #18324a;
+  text-shadow: 0 1px #fff;
+}
+
+.eventstack {
+  white-space: nowrap;
+  min-width: 500px;
+}
+
+.eventrow {
+  display: inline-grid;
+  grid-template-columns: auto 72px;
+  align-items: center;
+  gap: 4px;
+  margin: 2px;
+  padding: 2px 4px;
+  border: 1px solid #c9d8e5;
+  border-radius: 6px;
+  background: #f7fbff;
+}
+
+/* ==========================================================================
+       9. Coverage, Recommendations & Team Board
+       ========================================================================== */
+.cov {
+  display: grid;
+  grid-template-columns: 130px 1fr 35px;
+  gap: 6px;
+  align-items: center;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.track {
+  height: 14px;
+  background: #e5eaf0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+}
+
+.red {
+  background: var(--r);
+}
+.yellow {
+  background: var(--y);
+}
+.green {
+  background: var(--g);
+}
+
+.rec {
+  background: #e7f6f1;
+  border-left: 4px solid var(--t);
+  padding: 8px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.pick {
+  background: #f3f7fa;
+  border-left: 4px solid var(--b);
+  padding: 6px;
+}
+
+/* ==========================================================================
+       10. Charts & Visualizations
+       ========================================================================== */
+.charts {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.svgchart {
+  width: 100%;
+  min-height: 260px;
+  overflow-x: auto;
+}
+
+.svgchart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+}
+
+/* ==========================================================================
+       11. Modal Dialog & Scout Profiles
+       ========================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #061727cc;
+  z-index: 20;
+  padding: 2vh 3vw;
+}
+
+.modal.show {
+  display: block;
+}
+
+.dialog {
+  max-width: 1350px;
+  max-height: 96vh;
+  overflow: auto;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.mh {
+  position: sticky;
+  top: 0;
+  background: var(--n);
+  color: #fff;
+  padding: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.mb {
+  padding: 14px;
+}
+
+.close {
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.stats {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.stat {
+  background: #eff4f8;
+  padding: 8px;
+  border-radius: 7px;
+}
+
+.stat b {
+  display: block;
+  font-size: 18px;
+}
+
+.scout {
+  background: linear-gradient(105deg, #f5f0ff, #eef8ff);
+  border: 1px solid #cfc8e8;
+  border-left: 5px solid #6f2dbd;
+  border-radius: 9px;
+  padding: 13px;
+  margin: 12px 0;
+}
+
+.ice {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #d4c8e8;
+  border-radius: 16px;
+  padding: 4px 10px;
+  font-weight: 800;
+  margin-top: 7px;
+}
+
+.btn {
+  padding: 8px 13px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--g);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.remove {
+  background: var(--r);
+}
+
+/* ==========================================================================
+       12. Calculation Reference Cards
+       ========================================================================== */
+.calcgrid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.calc h3 {
+  color: var(--n);
+  margin: 0 0 6px;
+}
+
+.formula {
+  background: #eef5fb;
+  border-left: 4px solid var(--b);
+  padding: 8px;
+  font-family: Consolas, monospace;
+  margin: 6px 0;
+}
+
+.subtle {
+  color: #607080;
+}
+
+/* ==========================================================================
+       13. Responsive Breakpoints
+       ========================================================================== */
+@media (max-width: 1100px) {
+  .layout,
+  .two,
+  .charts,
+  .calcgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .kpis,
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

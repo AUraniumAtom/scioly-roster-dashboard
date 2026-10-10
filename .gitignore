@@ -1,3 +1,10 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Production build output
+dist/
+
 # Operating System Files
 .DS_Store
 Thumbs.db
@@ -9,7 +16,7 @@ desktop.ini
 *.swp
 *.swo
 
-# Temporary / Log files
+# Temporary & Log files
 *.log
 tmp/
 temp/

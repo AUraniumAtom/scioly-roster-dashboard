@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2027 Science Olympiad Tryout Scores and Selection</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>2027 Science Olympiad Tryout Scores and Selection</h1>
+      <p>
+        Final 23-event scoring, candidate profiles, returning-member tiers, and
+        live selection coverage
+      </p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button class="tab on" data-team="MI">MI Selection • Grades 5–6</button>
+      <button class="tab" data-team="MS">MS Selection • Grades 7–8</button>
+      <button class="tab" id="tierTab">Tier Rankings</button>
+      <button class="tab" id="calcTab">Calculation Reference</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+      <div class="note">
+        <b>Final dataset:</b> all 23 events are included. Event scores are
+        normalized separately within MI and MS. Grade colors:
+        <span class="tag g5">5</span>
+        <span class="tag g6">6</span>
+        <span class="tag g7">7</span>
+        <span class="tag g8">8</span>.
+      </div>
+
+      <!-- Candidate Score Board Room View -->
+      <div id="room">
+        <!-- Controls & Filter Bar -->
+        <div class="controls">
+          <div>
+            <label>Sort</label>
+            <select id="sort">
+              <option value="pi">Performance Index</option>
+              <option value="avg">All Average</option>
+              <option value="top4">Top 4</option>
+              <option value="top3">Top 3</option>
+              <option value="top2">Top 2</option>
+              <option value="best">Best Event</option>
+              <option value="name">Alphabetical</option>
+            </select>
+          </div>
+          <div>
+            <label>Search</label>
+            <input id="q" placeholder="Name or ID..." />
+          </div>
+          <div>
+            <label>Returning Tier</label>
+            <select id="tf">
+              <option value="">All Candidates</option>
+              <option value="NEW">New Candidates Only</option>
+              <option value="S+">S+ Tier</option>
+              <option value="S">S Tier</option>
+              <option value="A+">A+ Tier</option>
+              <option value="A">A Tier</option>
+              <option value="B+">B+ Tier</option>
+              <option value="B">B Tier</option>
+              <option value="C">C Tier</option>
+              <option value="D">D Tier</option>
+            </select>
+          </div>
+          <div>
+            <label>Min Tests Taken</label>
+            <input id="min" type="number" value="3" />
+          </div>
+          <div>
+            <label>Roster Target</label>
+            <input id="target" type="number" value="45" />
+          </div>
+          <div>
+            <label>Strong Event Threshold</label>
+            <input id="strong" type="number" value="60" />
+          </div>
+          <div>
+            <label>Coverage Needed</label>
+            <input id="need" type="number" value="6" />
+          </div>
+        </div>
+
+        <!-- KPI Summary Cards -->
+        <div class="kpis">
+          <div class="kpi">
+            <b id="k1"></b>
+            <small>Candidates</small>
+          </div>
+          <div class="kpi">
+            <b id="k2"></b>
+            <small>Selected</small>
+          </div>
+          <div class="kpi">
+            <b id="k3"></b>
+            <small>Team Index</small>
+          </div>
+          <div class="kpi">
+            <b id="k4"></b>
+            <small>Top-3 Avg</small>
+          </div>
+          <div class="kpi">
+            <b id="k5"></b>
+            <small>Events Covered</small>
+          </div>
+          <div class="kpi">
+            <b id="k6"></b>
+            <small>Gaps</small>
+          </div>
+          <div class="kpi">
+            <b id="k7"></b>
+            <small>Returning tiers</small>
+          </div>
+          <div class="kpi grade5" id="lk">
+            <b id="k8"></b>
+            <small id="ll"></small>
+          </div>
+          <div class="kpi grade6" id="hk">
+            <b id="k9"></b>
+            <small id="hl"></small>
+          </div>
+        </div>
+
+        <!-- Main Layout: Score Board & Live Coverage Sidebar -->
+        <div class="layout">
+          <!-- Candidate Score Board -->
+          <section class="panel">
+            <h2>Candidate Score Board</h2>
+            <div class="scroll">
+              <table>
+                <thead id="head">
+                  <tr>
+                    <th>#</th>
+                    <th>Select</th>
+                    <th data-key="name">Candidate</th>
+                    <th data-key="tierVal">Tier</th>
+                    <th data-key="grade">Grade</th>
+                    <th data-key="count">Tests</th>
+                    <th data-key="avg">Average</th>
+                    <th data-key="top4">Top 4</th>
+                    <th data-key="top3">Top 3</th>
+                    <th data-key="top2">Top 2</th>
+                    <th data-key="pi">Index</th>
+                    <th data-key="best">Best Events</th>
+                  </tr>
+                </thead>
+                <tbody id="body"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Sidebar Panels -->
+          <aside>
+            <section class="panel">
+              <h2>Selected Team Coverage</h2>
+              <div id="coverage"></div>
+            </section>
+            <section class="panel" style="margin-top: 10px">
+              <h2>Best Available for Gaps</h2>
+              <div id="recs"></div>
+            </section>
+            <section class="panel" style="margin-top: 10px">
+              <h2>Selected Roster Board</h2>
+              <div id="board" class="board"></div>
+            </section>
+          </aside>
+        </div>
+
+        <!-- Analytical Visualizations Grid -->
+        <div class="charts">
+          <div class="panel">
+            <h2>Index Score Distribution</h2>
+            <div id="hist" class="svgchart"></div>
+          </div>
+          <div class="panel">
+            <h2>Selected Grade Balance</h2>
+            <div id="gradeChart" class="svgchart"></div>
+          </div>
+          <div class="panel">
+            <h2>Selected Returning Tier Representation</h2>
+            <div id="tierChart" class="svgchart"></div>
+          </div>
+          <div class="panel">
+            <h2>Selected Team Event Strengths</h2>
+            <div id="strengthChart" class="svgchart"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier Rankings View -->
+      <div id="tierView" style="display: none">
+        <section class="panel">
+          <h2>Returning Member Tiers Across Both Divisions</h2>
+          <div id="tiers"></div>
+        </section>
+      </div>
+
+      <!-- Calculation Reference View -->
+      <div id="calcView" style="display: none">
+        <section class="panel">
+          <h2>Scoring Engine Formulas</h2>
+          <div class="calcgrid">
+            <div>
+              <h3>Percentile Rank</h3>
+              <div class="formula">
+                Percentile = 100 × (Count_Lower + 0.5 × (Count_Equal - 1)) /
+                (Total_Candidates - 1)
+              </div>
+              <p>
+                Calculates candidate's relative standing within the division.
+                Middle-rank correction applied for identical tied scores.
+              </p>
+            </div>
+            <div>
+              <h3>Normalized Score</h3>
+              <div class="formula">
+                Normalized = 100 × [w_p90 × min(1.05, Raw / P90) + w_pct ×
+                (Percentile / 100)]
+              </div>
+              <p class="subtle">
+                For &lt; 10 participants: w_p90 = 0.85, w_pct = 0.15. For ≥ 10
+                participants: w_p90 = 0.70, w_pct = 0.30.
+              </p>
+            </div>
+            <div>
+              <h3>Performance Index (Overall)</h3>
+              <div class="formula">
+                PI = (Tests ≥ 3) ? (0.7 × Average + 0.3 × Top-3) : Average
+              </div>
+              <p>
+                Emphasizes consistent multi-event strength while rewarding deep
+                peak performance in top events.
+              </p>
+            </div>
+            <div>
+              <h3>Returning Tier Value Scale</h3>
+              <div class="formula">
+                S+: 8 | S: 7 | A+: 6 | A: 5 | B+: 4 | B: 3 | C: 2 | D: 1 | New:
+                0
+              </div>
+              <p>
+                Weights assigned to prior tournament placements and verified
+                performance tiers.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Candidate & Event Detail Modal -->
+    <div id="modal" class="modal">
+      <div class="dialog">
+        <div class="mh">
+          <h2 id="mt"></h2>
+          <button class="close">×</button>
+        </div>
+        <div id="mb" class="mb"></div>
+      </div>
+    </div>
+
+    <!-- Main Application Script -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
