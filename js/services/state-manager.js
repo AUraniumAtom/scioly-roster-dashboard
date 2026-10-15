@@ -4,12 +4,24 @@
  */
 
 import { STORAGE_KEY } from '../config.js';
+import { pushUndo } from './undo-manager.js';
+
+const getInitialSelected = () => {
+  try {
+    if (typeof localStorage !== 'undefined') {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    }
+  } catch {
+    // Fall back to empty selection if storage access or JSON parsing fails
+  }
+  return {};
+};
 
 const state = {
   team: 'MI',
-  selected: JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'),
+  selected: getInitialSelected(),
   openEvent: null,
-  activeDataset: '2027-tryouts',
+  activeScoreSetId: '2027-tryouts',
 };
 
 const listeners = new Set();
@@ -33,13 +45,24 @@ export function subscribe(fn) {
 
 /**
  * Dispatches a partial state update, persists selections to localStorage,
- * and notifies all subscribers.
+ * pushes previous selection to undo history, and notifies all subscribers.
  * @param {Object} patch - Partial state object to merge.
+ * @param {Object} [options]
+ * @param {boolean} [options.skipUndo=false] - Whether to bypass recording this change in the undo stack.
  */
-export function dispatch(patch) {
+export function dispatch(patch, { skipUndo = false } = {}) {
+  if (!skipUndo && 'selected' in patch) {
+    pushUndo(state.selected);
+  }
   Object.assign(state, patch);
   if ('selected' in patch) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.selected));
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.selected));
+      }
+    } catch {
+      // Ignore in environments without localStorage
+    }
   }
   listeners.forEach((fn) => fn(state));
 }
@@ -51,6 +74,6 @@ export function serializeState() {
   return new URLSearchParams({
     team: state.team,
     sel: JSON.stringify(state.selected),
-    ds: state.activeDataset,
+    ds: state.activeScoreSetId,
   }).toString();
 }

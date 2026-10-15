@@ -19,7 +19,7 @@ export function renderTeamBoard(selectedCandidates) {
     .map(
       (cand, idx) => `
       <div class="pick">
-        #${idx + 1} <span class="link" data-student="${cand.id}">${cand.name}</span><br>
+        #${idx + 1} <span class="link" data-student="${cand.canonicalId}">${cand.name}</span><br>
         ${gradeBadge(cand.grade)} ${tierBadge(cand.tier)} ${scoreBar(cand.pi)}
       </div>
     `

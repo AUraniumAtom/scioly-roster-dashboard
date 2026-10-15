@@ -1,7 +1,7 @@
 {
   "name": "roster-dashboard",
   "version": "1.0.0",
-  "description": "Science Olympiad Tryout Scores and Selection Dashboard",
+  "description": "Science Olympiad Tryout/Mock Scores and Roster Selection Dashboard",
   "type": "module",
   "scripts": {
     "dev": "vite",

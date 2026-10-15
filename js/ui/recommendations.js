@@ -23,7 +23,7 @@ export function renderRecommendations(
   if (!container) return;
 
   const bestRecommendations = allCandidates
-    .filter((cand) => !selected[cand.id] && !cand.optout)
+    .filter((cand) => !selected[cand.canonicalId] && !cand.optout)
     .map((cand) => ({
       cand,
       fixes: gapEvents.filter(
@@ -38,7 +38,7 @@ export function renderRecommendations(
     bestRecommendations
       .map(
         (rec) => `
-    <div class="rec" data-student="${rec.cand.id}">
+    <div class="rec" data-student="${rec.cand.canonicalId}">
       <b>${rec.cand.name}</b> ${gradeBadge(rec.cand.grade)} ${tierBadge(rec.cand.tier)}
       <div>
         ${rec.fixes.map((e) => `<b>${e}</b>: ${rec.cand.events[e].norm.toFixed(1)} normalized, ${rec.cand.events[e].pct.toFixed(0)}th percentile`).join('<br>')}

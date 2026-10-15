@@ -2,10 +2,12 @@
  * Concrete JSON data loader implementation fetching static files.
  */
 
+import { createScoreSet } from '../models/score-set.js';
+
 /**
- * Loads event scores and candidate metadata from static JSON files.
+ * Loads event scores and candidate metadata from static JSON files and returns a ScoreSet.
  * @param {string} datasetId - Dataset folder name (e.g. '2027-tryouts').
- * @returns {Promise<{ eventScores: Array, candidateProfiles: Array }>}
+ * @returns {Promise<import('../models/score-set.js').ScoreSet>}
  */
 export async function jsonLoader(datasetId) {
   const [eventScores, candidateProfiles] = await Promise.all([
@@ -21,5 +23,12 @@ export async function jsonLoader(datasetId) {
     }),
   ]);
 
-  return { eventScores, candidateProfiles };
+  return createScoreSet({
+    id: datasetId,
+    label: datasetId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+    source: 'static-json',
+    eventScores,
+    candidateProfiles,
+  });
 }
+

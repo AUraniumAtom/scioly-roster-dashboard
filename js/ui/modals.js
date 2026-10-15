@@ -38,14 +38,16 @@ export function closeModal() {
  */
 export function showCandidateModal(candidateId, candidateModel) {
   dispatch({ openEvent: null });
-  const candidate = candidateModel.find((c) => c.id === candidateId);
+  const candidate = candidateModel.find(
+    (c) => c.canonicalId === candidateId || c.id === candidateId
+  );
   if (!candidate) return;
 
   const state = getState();
   const sortedEvents = Object.entries(candidate.events).sort(
     (a, b) => b[1].norm - a[1].norm
   );
-  const isSelected = !!state.selected[candidateId];
+  const isSelected = !!state.selected[candidate.canonicalId];
 
   openModal(
     `${candidate.name} ${gradeBadge(candidate.grade)} ${tierBadge(candidate.tier)}`,
@@ -55,7 +57,7 @@ export function showCandidateModal(candidateId, candidateModel) {
        <div>${candidate.statement || 'No scouting statement provided.'}</div>
        <span class="ice">Ice Cream: ${candidate.ice || 'Not Provided'}</span>
      </div>
-     <button class="btn ${isSelected ? 'remove' : ''}" data-pick-id="${candidateId}" data-pick-val="${!isSelected}">
+     <button class="btn ${isSelected ? 'remove' : ''}" data-pick-id="${candidate.canonicalId}" data-pick-val="${!isSelected}">
        ${isSelected ? 'Remove from Team' : 'Select for Team'}
      </button>
      <div class="stats" style="margin-top:10px">
@@ -147,7 +149,7 @@ export function showEventModal(eventName, candidateModel) {
     (cand) => cand.ev.norm >= strongVal
   ).length;
   const selectedCount = participants.filter(
-    (cand) => state.selected[cand.id]
+    (cand) => state.selected[cand.canonicalId]
   ).length;
 
   openModal(
@@ -176,10 +178,10 @@ export function showEventModal(eventName, candidateModel) {
          ${participants
            .map(
              (cand, idx) => `
-           <tr class="${state.selected[cand.id] ? 'sel' : ''} ${cand.optout ? 'opt' : ''}">
+           <tr class="${state.selected[cand.canonicalId] ? 'sel' : ''} ${cand.optout ? 'opt' : ''}">
              <td class="rank">${idx + 1}</td>
-             <td><input type="checkbox" data-id="${cand.id}" data-stay="1" ${state.selected[cand.id] ? 'checked' : ''}></td>
-             <td><span class="link" data-student="${cand.id}">${cand.name}</span></td>
+             <td><input type="checkbox" data-id="${cand.canonicalId}" data-stay="1" ${state.selected[cand.canonicalId] ? 'checked' : ''}></td>
+             <td><span class="link" data-student="${cand.canonicalId}">${cand.name}</span></td>
              <td>${gradeBadge(cand.grade)}</td>
              <td>${tierBadge(cand.tier)}</td>
              <td>${cand.ev.raw}</td>

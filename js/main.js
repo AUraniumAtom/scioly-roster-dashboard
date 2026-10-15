@@ -5,7 +5,10 @@
 import { registerLoader, loadData } from './services/data-service.js';
 import { jsonLoader } from './services/json-loader.js';
 import { getState, dispatch, subscribe } from './services/state-manager.js';
+import { getActiveScoreSet } from './services/dataset-store.js';
 import { buildCandidateModel } from './scoring/model-builder.js';
+import { computeViewModel } from './services/render-controller.js';
+import { undo, redo } from './services/undo-manager.js';
 import { renderScoreboard } from './ui/scoreboard.js';
 import { renderKPIs } from './ui/kpis.js';
 import { renderCoverage } from './ui/coverage.js';
@@ -13,206 +16,88 @@ import { renderRecommendations } from './ui/recommendations.js';
 import { renderTeamBoard } from './ui/team-board.js';
 import { renderSvgBarChart, renderHistogram } from './ui/charts.js';
 import {
-  openModal,
   closeModal,
   showCandidateModal,
   showEventModal,
 } from './ui/modals.js';
 import { showMainRoom, showTierView, showCalcView } from './ui/tabs.js';
-import { getFilterValues, bindControlListeners } from './ui/controls.js';
+import { bindControlListeners } from './ui/controls.js';
 import { $, $$ } from './utils/dom.js';
 
-let rawData = null;
 let currentCandidates = [];
 
 /**
  * Toggles a candidate's selection state and refreshes UI.
+ * @param {string} canonicalId - Candidate canonical identifier.
+ * @param {boolean} isSelected - Whether candidate is selected.
+ * @param {boolean} [stayInModal=false] - Whether to stay in open event modal.
  */
-function pickCandidate(id, isSelected, stayInModal = false) {
+function pickCandidate(canonicalId, isSelected, stayInModal = false) {
   const state = getState();
-  const nextSelected = { ...state.selected, [id]: isSelected };
+  const nextSelected = { ...state.selected, [canonicalId]: isSelected };
   dispatch({ selected: nextSelected });
 
   if (stayInModal && state.openEvent) {
-    const model = buildCandidateModel(
-      state.team,
-      rawData.eventScores,
-      rawData.candidateProfiles
-    );
-    showEventModal(state.openEvent, model);
+    showEventModal(state.openEvent, currentCandidates);
   } else if (!stayInModal) {
     closeModal();
   }
 }
 
 /**
- * Primary UI render routine: aggregates models, filters, populates scoreboard,
- * updates sidebars, and draws visual charts.
+ * Migrates existing selection keys from raw ID to canonicalId.
+ * @param {Array<Object>} candidates
+ */
+function migrateSelections(candidates) {
+  const state = getState();
+  const newSelected = {};
+  let changed = false;
+  for (const [key, val] of Object.entries(state.selected || {})) {
+    const match = candidates.find((c) => c.id === key);
+    if (match) {
+      newSelected[match.canonicalId] = val;
+      changed = true;
+    } else {
+      newSelected[key] = val;
+    }
+  }
+  if (changed) {
+    dispatch({ selected: newSelected }, { skipUndo: true });
+  }
+}
+
+/**
+ * Primary UI render routine: delegates view-model computation to RenderController
+ * and dispatches to thin UI renderers.
  */
 function render() {
-  if (!rawData) return;
-  const state = getState();
-  const filters = getFilterValues();
+  const vm = computeViewModel();
+  if (!vm) return;
+  currentCandidates = vm.allCandidates;
 
   showMainRoom();
-  const allCandidates = buildCandidateModel(
-    state.team,
-    rawData.eventScores,
-    rawData.candidateProfiles
-  );
-  currentCandidates = allCandidates;
-
-  // Filter candidates according to user controls
-  const filteredList = allCandidates
-    .filter(
-      (cand) =>
-        cand.count >= filters.minTests &&
-        (cand.name.toLowerCase().includes(filters.searchQuery) ||
-          String(cand.id).includes(filters.searchQuery)) &&
-        (!filters.tierFilter ||
-          (filters.tierFilter === 'NEW'
-            ? !cand.tier
-            : cand.tier === filters.tierFilter))
-    )
-    .sort((a, b) =>
-      filters.sort === 'name'
-        ? a.name.localeCompare(b.name)
-        : b[filters.sort] - a[filters.sort]
-    );
-
-  // Render main scoreboard table
-  renderScoreboard(filteredList, state.selected, filters.sort);
-
-  // Compute coverage, metrics, and gaps
-  const selectedCandidates = allCandidates.filter((c) => state.selected[c.id]);
-  const divisionEvents = [
-    ...new Set(
-      rawData.eventScores
-        .filter((x) => x.team === state.team)
-        .map((x) => x.event)
-    ),
-  ].sort();
-
-  const eventAvgNorm = {};
-  divisionEvents.forEach((evt) => {
-    const selScores = selectedCandidates
-      .filter((c) => c.events[evt])
-      .map((c) => c.events[evt].norm);
-    eventAvgNorm[evt] = selScores.length
-      ? selScores.reduce((a, b) => a + b, 0) / selScores.length
-      : 0;
-  });
-
-  const eventCoverageCounts = {};
-  selectedCandidates.forEach((cand) => {
-    Object.entries(cand.events).forEach(([evt, evData]) => {
-      if (evData.norm >= filters.strongThreshold) {
-        eventCoverageCounts[evt] = (eventCoverageCounts[evt] || 0) + 1;
-      }
-    });
-  });
-
-  const coveredEventsCount = divisionEvents.filter(
-    (e) => (eventCoverageCounts[e] || 0) >= filters.coverageNeeded
-  ).length;
-  const gradeSpan = state.team === 'MI' ? [5, 6] : [7, 8];
-  const gradeCounts = [
-    selectedCandidates.filter((c) => c.grade === gradeSpan[0]).length,
-    selectedCandidates.filter((c) => c.grade === gradeSpan[1]).length,
-  ];
-
-  // Render KPI cards
-  const teamIndexAvg = selectedCandidates.length
-    ? selectedCandidates.reduce((sum, c) => sum + c.pi, 0) /
-      selectedCandidates.length
-    : 0;
-  const top3Avg = selectedCandidates.length
-    ? selectedCandidates.reduce((sum, c) => sum + c.top3, 0) /
-      selectedCandidates.length
-    : 0;
-
+  renderScoreboard(vm.filteredList, vm.state.selected, vm.filters.sort);
   renderKPIs({
-    listCount: filteredList.length,
-    selectedCount: selectedCandidates.length,
-    rosterTarget: filters.rosterTarget,
-    teamIndexAvg,
-    top3Avg,
-    coverageCount: coveredEventsCount,
-    totalEvents: divisionEvents.length,
-    returningCount: selectedCandidates.filter((c) => c.tier).length,
-    gradeCounts,
-    gradeSpan,
+    listCount: vm.filteredList.length,
+    selectedCount: vm.selectedCandidates.length,
+    rosterTarget: vm.filters.rosterTarget,
+    teamIndexAvg: vm.teamIndexAvg,
+    top3Avg: vm.top3Avg,
+    coverageCount: vm.coveredEventsCount,
+    totalEvents: vm.divisionEvents.length,
+    returningCount: vm.returningCount,
+    gradeCounts: vm.gradeCounts,
+    gradeSpan: vm.gradeSpan,
   });
+  renderCoverage(vm.divisionEvents, vm.eventCoverageCounts, vm.filters.coverageNeeded);
+  renderTeamBoard(vm.selectedCandidates);
+  renderRecommendations(vm.allCandidates, vm.state.selected, vm.gapEvents, vm.filters.strongThreshold);
 
-  // Render sidebar coverage & team board
-  renderCoverage(divisionEvents, eventCoverageCounts, filters.coverageNeeded);
-  renderTeamBoard(selectedCandidates);
-
-  // Render gap recommendations
-  const gapEvents = divisionEvents.filter(
-    (e) => (eventCoverageCounts[e] || 0) < filters.coverageNeeded
-  );
-  renderRecommendations(
-    allCandidates,
-    state.selected,
-    gapEvents,
-    filters.strongThreshold
-  );
-
-  // Render charts
-  const histContainer = $('#hist');
-  if (histContainer) {
-    renderHistogram(
-      histContainer,
-      filteredList.map((c) => c.pi)
-    );
-  }
-
-  const gradeChartContainer = $('#gradeChart');
-  if (gradeChartContainer) {
-    renderSvgBarChart(
-      gradeChartContainer,
-      gradeSpan.map((g) => `Grade ${g}`),
-      gradeCounts,
-      gradeSpan.map((g) =>
-        getComputedStyle(document.documentElement)
-          .getPropertyValue(`--g${g}`)
-          .trim()
-      ),
-      'Selected'
-    );
-  }
-
+  renderHistogram($('#hist'), vm.filteredList.map((c) => c.pi));
+  renderSvgBarChart($('#gradeChart'), vm.gradeSpan.map((g) => `Grade ${g}`), vm.gradeCounts, vm.gradeSpan.map((g) => getComputedStyle(document.documentElement).getPropertyValue(`--g${g}`).trim()), 'Selected');
   const tierKeys = ['S+', 'S', 'A+', 'A', 'B+', 'B', 'C', 'D', 'NEW'];
-  const tierChartContainer = $('#tierChart');
-  if (tierChartContainer) {
-    renderSvgBarChart(
-      tierChartContainer,
-      tierKeys,
-      tierKeys.map(
-        (t) => selectedCandidates.filter((c) => (c.tier || 'NEW') === t).length
-      ),
-      tierKeys.map(() => '#6f78b8'),
-      'Selected'
-    );
-  }
-
-  const strengthChartContainer = $('#strengthChart');
-  if (strengthChartContainer) {
-    renderSvgBarChart(
-      strengthChartContainer,
-      divisionEvents,
-      divisionEvents.map((e) => eventAvgNorm[e]),
-      divisionEvents.map((e) =>
-        eventAvgNorm[e] >= 80
-          ? '#5b9f46'
-          : eventAvgNorm[e] >= 60
-            ? '#efb536'
-            : '#2574b8'
-      ),
-      'Average normalized'
-    );
-  }
+  renderSvgBarChart($('#tierChart'), tierKeys, tierKeys.map((t) => vm.selectedCandidates.filter((c) => (c.tier || 'NEW') === t).length), tierKeys.map(() => '#6f78b8'), 'Selected');
+  renderSvgBarChart($('#strengthChart'), vm.divisionEvents, vm.divisionEvents.map((e) => vm.eventAvgNorm[e]), vm.divisionEvents.map((e) => vm.eventAvgNorm[e] >= 80 ? '#5b9f46' : vm.eventAvgNorm[e] >= 60 ? '#efb536' : '#2574b8'), 'Average normalized');
 }
 
 /**
@@ -279,13 +164,16 @@ function setupEventDelegation() {
         dispatch({ team: tabBtn.dataset.team });
         render();
       } else if (tabBtn.id === 'tierTab') {
-        showTierView((team) =>
-          buildCandidateModel(
-            team,
-            rawData.eventScores,
-            rawData.candidateProfiles
-          )
-        );
+        const activeSet = getActiveScoreSet();
+        if (activeSet) {
+          showTierView((team) =>
+            buildCandidateModel(
+              team,
+              activeSet.eventScores,
+              activeSet.candidateProfiles
+            )
+          );
+        }
       } else if (tabBtn.id === 'calcTab') {
         showCalcView();
       }
@@ -319,6 +207,28 @@ function setupEventDelegation() {
       }
     });
   }
+
+  // Keyboard shortcuts for Undo (Ctrl+Z) and Redo (Ctrl+Shift+Z / Ctrl+Y)
+  document.addEventListener('keydown', (e) => {
+    const isUndo = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z' && !e.shiftKey;
+    const isRedo =
+      (e.ctrlKey || e.metaKey) &&
+      ((e.key.toLowerCase() === 'z' && e.shiftKey) || e.key.toLowerCase() === 'y');
+
+    if (isUndo) {
+      e.preventDefault();
+      const prev = undo(getState().selected);
+      if (prev) {
+        dispatch({ selected: prev }, { skipUndo: true });
+      }
+    } else if (isRedo) {
+      e.preventDefault();
+      const next = redo(getState().selected);
+      if (next) {
+        dispatch({ selected: next }, { skipUndo: true });
+      }
+    }
+  });
 }
 
 /**
@@ -326,7 +236,13 @@ function setupEventDelegation() {
  */
 async function init() {
   registerLoader(jsonLoader);
-  rawData = await loadData(getState().activeDataset);
+  const scoreSet = await loadData(getState().activeScoreSetId);
+  const initialCandidates = buildCandidateModel(
+    getState().team,
+    scoreSet.eventScores,
+    scoreSet.candidateProfiles
+  );
+  migrateSelections(initialCandidates);
 
   setupEventDelegation();
   bindControlListeners(render);

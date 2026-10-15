@@ -23,11 +23,11 @@ export function renderScoreboard(candidates, selected, sortKey) {
   tableBody.innerHTML = candidates
     .map(
       (cand, idx) => `
-    <tr class="${selected[cand.id] ? 'sel' : ''} ${cand.optout ? 'opt' : ''}">
+    <tr class="${selected[cand.canonicalId] ? 'sel' : ''} ${cand.optout ? 'opt' : ''}">
       <td class="rank">${idx + 1}</td>
-      <td><input type="checkbox" data-id="${cand.id}" ${selected[cand.id] ? 'checked' : ''}></td>
+      <td><input type="checkbox" data-id="${cand.canonicalId}" ${selected[cand.canonicalId] ? 'checked' : ''}></td>
       <td>
-        <span class="link" data-student="${cand.id}">${cand.name}</span><br>
+        <span class="link" data-student="${cand.canonicalId}">${cand.name}</span><br>
         <small>${cand.id}</small>${cand.optout ? '<br><span class="tag inj">DO NOT SELECT</span>' : ''}
       </td>
       <td>${tierBadge(cand.tier)}</td>

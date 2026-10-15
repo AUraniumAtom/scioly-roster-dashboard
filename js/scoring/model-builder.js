@@ -5,6 +5,7 @@
 
 import { quantile, percentileRank } from './math.js';
 import { TIER_WEIGHTS } from '../config.js';
+import { canonicalKey } from '../utils/candidate-identity.js';
 
 /**
  * Builds candidate model records for a specified division ('MI' or 'MS').
@@ -58,6 +59,7 @@ export function buildCandidateModel(team, eventScores, candidateProfiles) {
 
     return {
       ...candidate,
+      canonicalId: canonicalKey(candidate.name, candidate.grade),
       count: norms.length,
       avg,
       top4: averageTopN(4),
@@ -69,3 +71,4 @@ export function buildCandidateModel(team, eventScores, candidateProfiles) {
     };
   });
 }
+
