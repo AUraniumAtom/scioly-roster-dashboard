@@ -187,6 +187,7 @@ table {
 th {
   position: sticky;
   top: 0;
+  z-index: 2;
   background: var(--n);
   color: #fff;
   padding: 7px;
@@ -455,7 +456,7 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 10;
 }
 
 .mb {

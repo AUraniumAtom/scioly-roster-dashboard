@@ -20,3 +20,7 @@ desktop.ini
 *.log
 tmp/
 temp/
+
+# Agent Customizations & Skills
+.agents/
+skills-lock.json

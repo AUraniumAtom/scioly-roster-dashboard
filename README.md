@@ -95,6 +95,7 @@ scioly-roster-dashboard/
 ├── .gitignore                                                 # Standard ignore rules
 ├── 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html        # Interactive tryout & selection dashboard
 ├── LICENSE                                                    # MIT License
+├── ROADMAP.md                                                 # Project development roadmap & feature phasing
 └── README.md                                                  # Project documentation & reference
 ```
 
