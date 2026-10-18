@@ -1,115 +1,132 @@
-# 🔬 Science Olympiad Tryout Scores & Team Roster Selection Dashboard
+# Science Olympiad Roster Dashboard
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![HTML5 / Vanilla JS](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-orange.svg)](#technical-architecture)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue.svg)](LICENSE)
+[![Vite 8](https://img.shields.io/badge/Bundler-Vite%208-646CFF.svg?logo=vite&logoColor=white)](https://vite.dev/)
+[![pnpm](https://img.shields.io/badge/Package%20Manager-pnpm-F69220.svg?logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Vitest 5](https://img.shields.io/badge/Testing-Vitest%205-729B1B.svg?logo=vitest&logoColor=white)](https://vitest.dev/)
+[![ESM / Vanilla JS](https://img.shields.io/badge/Stack-ES2022%20Modules-yellow.svg)](#tech-stack)
 [![Events: 23](https://img.shields.io/badge/Events-23%20Included-teal.svg)](#features)
 
-An interactive, high-performance web dashboard designed for Science Olympiad coaches and selection committees to evaluate tryout performance, simulate team rosters, analyze 23-event coverage, and optimize team composition.
+A browser-based workspace for Science Olympiad coaches to evaluate tryout scores, simulate rosters, and analyze 23-event coverage across two competitive divisions.
 
 ---
 
-## 🌟 Overview
+## Overview
 
-Selecting a competitive Science Olympiad team requires balancing individual candidate performance across multiple events with comprehensive team-wide coverage across all 23 competitive events.
+Selecting a competitive Science Olympiad team requires balancing individual candidate performance across multiple events with complete event coverage.
 
-This dashboard provides coaches with an interactive, data-driven workspace to evaluate tryout results, identify event gaps in real time, and build balanced rosters for both:
+This dashboard provides coaches with an interactive, data-driven workspace to evaluate tryout results, identify coverage gaps in real time, and build balanced rosters across two divisions:
+
 - **MI Division (Grades 5–6)**: Intermediate School candidates
 - **MS Division (Grades 7–8)**: Middle School candidates
 
----
-
-## ✨ Key Features
-
-### 1. Dual Division Analysis
-- **Independent Normalization**: Candidates are evaluated and ranked strictly within their appropriate competitive division (`MI` vs. `MS`).
-- **One-Click Switch**: Seamlessly toggle between divisions without losing roster selections or filter settings.
-
-### 2. Live Team Selection & Coverage Meter
-- **Interactive Roster Builder**: Add or remove candidates directly from the scoreboard or scout profile modals.
-- **Real-Time Coverage Tracking**: Visual status bars track candidate depth for every one of the 23 events:
-  - 🔴 **Red**: Critical coverage gap (below minimum threshold)
-  - 🟡 **Yellow**: Moderate coverage (approaching target depth)
-  - 🟢 **Green**: Fully covered event
-- **Target Roster Configuration**: Dynamically adjust target roster size (e.g., 45 students), strong-event score thresholds, and required depth per event.
-
-### 3. Intelligent Gap Analysis & Candidate Recommendations
-- **Automated Recommendations**: Detects weakly staffed events and instantly suggests the highest-performing available candidates suited to fill those specific gaps.
-- **Quick-Add Actions**: One-click candidate addition straight from recommendation cards.
-
-### 4. Robust Statistical Scoring Engine
-- **Event P90 Normalization**: Calculates the 90th percentile score per event within each division, mitigating single-outlier skew while maintaining a rigorous high-performance benchmark.
-- **Midpoint Tied Percentiles**: Fair, rank-ordered percentile calculation accounting for ties.
-- **Performance Index (PI)**: Composite metric weighting top event finishes and consistency across multiple tests.
-- **Flexible Sorting**: Sort candidates by Performance Index, All-Test Average, Top 4, Top 3, Top 2, Single Best Event, or Tier.
-
-### 5. Candidate Scout Profiles
-- Detailed candidate modal displaying:
-  - Overall standing, grade, and test count
-  - Event-by-event raw scores, normalized percentiles, and relative rankings
-  - Visual performance radar / bar charts
-  - Direct roster selection toggle
-
-### 6. Interactive Visualizations
-- **Score Distribution Histogram**: Understand candidate distribution across Performance Index bands.
-- **Grade Mix Visualizer**: Monitor age balance across grades 5–6 (MI) and grades 7–8 (MS).
-- **Tier Mix Chart**: Track distribution of historical returning members versus new recruits.
-- **Event Strength Profile**: Inspect aggregate team strength across all 23 events.
-
-### 7. Historical Tier Rankings
-- Track returning competitors across tiers (`S+`, `S`, `A+`, `A`, `B+`, `B`, `C`, `D`).
-- *Note:* Historical tiers serve as context and do not alter objective tryout score computations.
-
-### 8. Built-in Calculation Reference
-- Integrated tab documenting all mathematical formulas, percentiles, normalization logic, and index definitions for full transparency with parents, students, and coaches.
+Everything runs locally in the browser with no backend or account required.
 
 ---
 
-## 🚀 Getting Started
+## Features
 
-This application is completely self-contained with **zero external dependencies** and requires no build steps or local servers:
+### Evaluation
 
-1. Clone or download the repository:
-   ```bash
-   git clone https://github.com/A-Uranium-Atom/scioly-roster-dashboard.git
-   cd scioly-roster-dashboard
-   ```
-2. Open `2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html` in any modern web browser (Chrome, Edge, Firefox, Safari):
-   - Double-click the file or run:
-     ```bash
-     # Windows
-     start 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html
+- **Dual-division normalization**: Scores are normalized within each division (`MI` vs. `MS`) using 90th-percentile (P90) benchmarks and tied percentile ranks.
+- **Performance Index (PI)**: Composite score balancing top finishes and consistency across multiple tests (`PI = 0.7 × avg + 0.3 × top3` when tests ≥ 3).
+- **Flexible candidate sorting**: Rank by Performance Index, overall average, top finishes, single best event, or historical tier.
+- **Historical tiers**: Displays returning competitor context (`S+` through `D`) without biasing objective scoring calculations.
 
-     # macOS
-     open 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html
+### Drafting
 
-     # Linux
-     xdg-open 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html
-     ```
+- **Interactive roster selection**: Add or remove candidates directly from the scoreboard, recommendation cards, or scout profiles.
+- **Real-time coverage tracking**: Color-coded meters track candidate depth across all 23 competitive events.
+- **Configurable targets**: Adjust target roster sizes, strong-event score thresholds, and required event depth on the fly.
+- **Selection undo and redo**: Mistake recovery during live draft sessions via keyboard shortcuts (`Ctrl+Z` / `Ctrl+Shift+Z`).
+
+### Recommendations
+
+- **Automated gap detection**: Identifies understaffed events based on your configured coverage requirements.
+- **Targeted suggestions**: Surfaces the highest-performing available candidates suited to fill specific event deficits.
+- **One-click assignment**: Add suggested candidates directly from recommendation cards into the roster.
+
+### Inspection & Analysis
+
+- **Candidate scout profiles**: View event breakdown, raw scores, normalized percentiles, radar charts, and scouting statements.
+- **Visual distributions**: Performance Index histograms, grade balance, tier mix, and aggregate team event strength charts.
+- **Calculation reference**: Built-in reference tab documenting all mathematical formulas and normalization logic for transparency.
 
 ---
 
-## 📁 Repository Structure
+## Getting Started
 
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended)
+- [pnpm](https://pnpm.io/)
+
+```bash
+# Enable pnpm via Corepack if not already installed
+corepack enable pnpm
 ```
-scioly-roster-dashboard/
-├── .gitignore                                                 # Standard ignore rules
-├── 2027_Science_Olympiad_Tryout_Scores_and_Selection_v6.html        # Interactive tryout & selection dashboard
-├── LICENSE                                                    # MIT License
-├── ROADMAP.md                                                 # Project development roadmap & feature phasing
-└── README.md                                                  # Project documentation & reference
+
+### Setup & Commands
+
+```bash
+# Clone the repository
+git clone https://github.com/A-Uranium-Atom/scioly-roster-dashboard.git
+cd scioly-roster-dashboard
+
+# Install dependencies
+pnpm install
+
+# Start local development server (localhost:3000)
+pnpm dev
+
+# Run unit tests
+pnpm test:run
+
+# Build for production
+pnpm build
 ```
 
 ---
 
-## 🛠️ Technical Architecture
+## Repository Layout
 
-- **Pure Client-Side**: 100% vanilla HTML5, CSS3, and modern JavaScript (ES6+).
-- **No External CDN/Build Dependencies**: Fully functional offline without npm packages, Webpack, or external libraries.
-- **Dynamic Inline SVG**: Ultra-lightweight chart rendering using raw SVG for crisp scaling and zero layout shifts.
-- **Responsive Layout**: CSS Grid and Flexbox layout optimized for high-resolution desktop monitors, projectors, and tablets.
+```
+├── index.html              # SPA shell
+├── css/styles.css          # Design tokens and stylesheet
+├── js/
+│   ├── main.js             # Bootstrap, loaders, event delegation
+│   ├── config.js           # Configuration, constants, default thresholds
+│   ├── models/             # Domain models (ScoreSet)
+│   ├── scoring/            # P90 normalization and scoring pipeline
+│   ├── services/           # State management, data loading, view-model derivation
+│   ├── ui/                 # Component renderers (scoreboard, modals, charts, meters)
+│   └── utils/              # Query helpers and candidate identity resolution
+├── data/                   # Default tryout datasets
+├── vite.config.js          # Vite and Vitest configuration
+└── package.json            # Scripts and dependencies
+```
 
 ---
 
-## 📝 License
+## Tech Stack
 
-This project is open source and available under the [MIT License](LICENSE).
+| Layer             | Tool                                          | Notes                                               |
+| ----------------- | --------------------------------------------- | --------------------------------------------------- |
+| Runtime / Bundler | [Vite 8](https://vite.dev/)                   | Dev server on port 3000, production Rollup pipeline |
+| Package Manager   | [pnpm](https://pnpm.io/)                      | Managed via `pnpm-lock.yaml`                        |
+| Language          | Vanilla JavaScript                            | ES2022+ modules (`type: "module"`), named exports   |
+| Styling           | Vanilla CSS                                   | CSS custom properties in `:root`                    |
+| Charting          | [ApexCharts 7](https://apexcharts.com/) + SVG | Interactive canvas charts and inline SVG            |
+| Testing           | [Vitest 5](https://vitest.dev/)               | Unit test suite co-located with source modules      |
+
+---
+
+## Roadmap
+
+Planned features including multi-competition analytics, XLSX/CSV file imports, printable schedules, and collaboration tools are tracked in [ROADMAP.md](ROADMAP.md).
+
+---
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0 or later (GPL-3.0-or-later)](LICENSE).

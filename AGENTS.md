@@ -409,6 +409,100 @@ Register loaders in `main.js` at startup via `registerLoader()`. Never load data
 
 ---
 
+## Documentation & Commit Hygiene
+
+Every code change that alters the project's **public surface** must be accompanied by a documentation pass and a clean commit. "Public surface" means anything a contributor, coach, or parent could notice: new files, renamed modules, changed commands, added/removed dependencies, shifted architecture, or modified scoring behavior.
+
+### When to Update Documentation
+
+A documentation pass is required when a change does **any** of the following:
+
+| Trigger | Examples |
+|---------|----------|
+| **File added, renamed, or removed** | New module in `js/`, new data loader, new test file |
+| **Dependency added, removed, or bumped** | `pnpm add papaparse`, Vite major version bump |
+| **npm script added or changed** | New `pnpm lint` script, changed dev server port |
+| **Architecture or data-flow change** | New service layer, new state shape field, new rendering pipeline stage |
+| **Feature completed from ROADMAP.md** | Phase 0.4 (undo/redo) shipped → mark complete, update summary |
+| **Scoring formula change** | Any modification to `model-builder.js` normalization or PI calculation |
+| **Config constant changed** | `STORAGE_KEY`, default thresholds, tier weights |
+| **License or metadata change** | License field, repo URL, project description |
+
+If a change is purely internal (e.g., renaming a local variable, fixing a typo in a comment, adjusting CSS spacing) and touches none of the triggers above, a documentation pass is **not** required.
+
+### What to Update
+
+When a documentation pass is triggered, review and update **each** of the following files as applicable:
+
+#### `AGENTS.md`
+- **Repository Layout** tree — add/remove/rename entries to mirror the actual file structure.
+- **Tech Stack** table — update versions, add new tools.
+- **Architecture** section — update data-flow diagram, state shape, or architectural patterns if they changed.
+- **Best Practices** — add guidance for any new pattern or convention introduced.
+- **Domain Glossary** — add terms introduced by the change.
+
+#### `README.md`
+- **Key Features** list — add new features, update descriptions of changed features.
+- **Repository Layout** tree — keep in sync with `AGENTS.md` (README's tree is a slightly simplified mirror).
+- **Technical Architecture** table — mirror tech stack changes.
+- **Getting Started** — update if commands, prerequisites, or setup steps changed.
+- **Badges** — update if versions, license, or stack changed.
+
+#### `package.json`
+- `version` — bump according to semver when shipping a user-visible feature or breaking change.
+- `description` — update if the project scope meaningfully changed.
+- `scripts` — add/remove/rename scripts as needed.
+- `dependencies` / `devDependencies` — should already be correct from `pnpm add/remove`, but verify.
+
+#### `ROADMAP.md`
+- Mark completed items (e.g., strikethrough or ✅ prefix) when a roadmap feature ships.
+- Update complexity estimates if implementation revealed the original was wrong.
+- Add new items if the change introduced scope that belongs on the roadmap.
+- Do **not** remove completed items — they serve as a historical record.
+
+#### Other files (as applicable)
+- `vite.config.js` — if Vitest or Vite config sections were mentioned in docs but changed.
+- `.prettierrc` / `.gitignore` — if formatting or ignore rules changed and are referenced in docs.
+- `LICENSE` — only if the license itself changed (rare).
+
+### Commit Convention
+
+After completing the documentation pass, stage all updated docs alongside the code changes and commit together — **not** as a separate "update docs" commit trailing behind. Documentation is part of the change, not an afterthought.
+
+```bash
+# ✅ Good — docs updated in the same commit as the feature
+git add js/services/csv-loader.js js/services/csv-loader.test.js
+git add AGENTS.md README.md ROADMAP.md
+git commit -m "feat: add CSV import loader (Phase 1.1)
+
+- Registers csvLoader via data-service.js pluggable loader contract
+- Parses CSV with PapaParse, maps columns via import wizard
+- Updates AGENTS.md repo layout, architecture, and best practices
+- Updates README.md features list and tech stack
+- Marks ROADMAP.md Phase 1.1 as complete"
+
+# ❌ Bad — code ships without doc updates, docs trail in a separate commit
+git commit -m "add csv loader"
+# ... later ...
+git commit -m "update docs"
+```
+
+Use [Conventional Commits](https://www.conventionalcommits.org/) prefixes: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`. When a commit includes both code and doc changes, use the prefix that describes the primary change (usually `feat:` or `fix:`), and mention the doc updates in the commit body.
+
+### Verification Checklist
+
+Before finalizing a commit that triggers a documentation pass, confirm:
+
+- [ ] `AGENTS.md` Repository Layout matches the actual file tree
+- [ ] `README.md` Repository Layout matches (simplified mirror)
+- [ ] Tech stack versions are accurate across `AGENTS.md` and `README.md`
+- [ ] Any new npm scripts appear in both `AGENTS.md` Commands and `README.md` Getting Started
+- [ ] `ROADMAP.md` reflects current completion status
+- [ ] `package.json` version is appropriate for the change scope
+- [ ] No stale references to removed files, renamed functions, or old config values
+
+---
+
 ## Domain Glossary
 
 | Term | Meaning |
